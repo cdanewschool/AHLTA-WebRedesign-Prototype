@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>UIZE JavaScript Framework: Reference - <% .title %></title>
+	<meta name="keywords" content=""/>
+	<meta name="description" content=""/>
+	<link rel="stylesheet" href="../css/page.css"/>
+	<link rel="stylesheet" href="../css/page.simpledoc.css"/>
+</head>
+
+<body>
+
+<script type="text/javascript" src="../js/Uize.js"></script>
+
+<h1 class="document-title">
+	<a id="page-homeLink" href="../index.html" title="UIZE JavaScript Framework home"></a>
+	<% .title %><a id="page-viewSource" href="javascript://" class="buttonLink">VIEW MODULE SOURCE</a>
+</h1>
+
+<% .body %>
+
+<script type="text/javascript">
+
+Uize.module ({
+	required:'UizeDotCom.Page.Doc.Module',
+	builder:function () {(window.page = new UizeDotCom.Page.Doc.Module).wireUi ()}
+});
+
+</script>
+
+</body></html>

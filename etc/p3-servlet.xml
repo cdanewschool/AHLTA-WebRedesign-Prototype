@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd" >
+
+	<bean id="viewResolver" 
+		class="org.springframework.web.servlet.view.InternalResourceViewResolver" >
+		<property name="viewClass" 
+			value="org.springframework.web.servlet.view.JstlView" />
+		<property name="prefix" value="/WebContent/public/templates/" />
+		<property name="suffix" value=".jsp" />
+	</bean >
+
+
+
+	<bean name="/results_new" class="edu.newschool.piim.web.CntrlResultsNew" /> 
+	
+	<bean name="/appointments" class="edu.newschool.piim.web.CntrlAppointments" >
+		<property name="schedView" value="appointments/sched" />
+		<property name="clientView" value="appointments/client" />
+	</bean>
+	
+	<bean name="/telephone_consults" class="edu.newschool.piim.web.CntrlAppointments">
+		<property name="schedView"  value="telephoneConsults/sched" />
+		<property name="clientView" value="telephoneConsults/client" />
+	</bean>
+	
+	<bean name="/search" class="edu.newschool.piim.web.CntrlSearch" />
+	 
+	<bean name="/currentPatient" class="edu.newschool.piim.web.CntrlCurPatient" /> 
+	
+	
+</beans>

@@ -1,0 +1,53 @@
+div.topBar { 
+	position: relative ; height: 24px; width: 1024px; top: 0px; left: 0px;
+	background-color: #2C8197; background-repeat: repeat-x;
+	background-image: url(../images/topBar/gr_TopBar_Background_1x24.gif);
+}
+div.topBar div.topMenu { 
+	position: absolute ; top: 0; left: 10px; height: 24px; width: 350px ;
+}
+div.topBar div.topMenu ul { 
+	position: absolute; height: 24px;  width: 350px; 
+	white-space: nowrap ; list-style-type: none; padding: 0 ; margin: 0; 
+}
+
+
+div.topBar div.topMenu li {	display: -moz-inline-box; display: inline-block; zoom:1; *display: inline; _height: 24px; position: relative; height: 24px;  
+}
+		
+div.topBar div.topMenu li a {
+	position: relative; padding-left: 10px; padding-right: 10px;
+	display: block; height: 24px; 
+	font-size: 12px; line-height: 24px;
+	font-family: "Gill Sans", Trebuchet, sans-serif, serif; 
+	color:#000; text-decoration: none; outline: none; cursor: pointer;
+}
+
+div.topBar div.topMenu li a:active { background-color: #00AEEF; color: #fff;
+	cursor: default;
+}
+
+div.topBar div.notifications { position: absolute; left: 360px; top: 0px;
+	width: 653px; height: 20px;
+	padding-right: 11px; padding-top: 2px; padding-bottom: 2px;
+	direction: rtl; 
+}
+div.topBar div.notifications ul{ 
+	position: absolute; list-style-type: none;
+	margin: 0;	padding: 0;	 }
+
+div.topBar div.notifications ul li { 
+	position: relative; 
+	display: -moz-inline-box; display: inline-block;  zoom:1; *display: inline; _height: 20px; 
+	padding-left: 3px;  
+}
+div.topBar div.notifications ul li a {
+	position: relative; display: block; cursor: pointer;
+}
+div.topBar div.notifications ul li a:active {
+	cursor: default;
+}
+div.topBar div.notifications ul li img {
+	position: relative; 
+}
+

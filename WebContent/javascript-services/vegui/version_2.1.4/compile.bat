@@ -1,0 +1,1 @@
+copy/b vegui.std.js +vegui.window.class.js +vegui.tabbeddialog.class.js +vegui.scrollbar.class.js +vegui.menu.class.js +vegui.list.class.js +vegui.fx.class.js +vegui.checkbox.class.js +vegui.cbox.class.js +vegui.button.class.js +vegui.bridge.class.js +vegui.selector.class.js +vegui.propertyset.class.js +vegui.taskbar.class.js compiled\vegui.js

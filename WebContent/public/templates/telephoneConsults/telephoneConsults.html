@@ -1,0 +1,165 @@
+<div class="contentContainer" id="appointments" >
+	<form onSubmit=" return false;" action="" method="get" > 
+
+		<div class="title"><h1>Telephone Consults</h1></div>
+		<div class="actions">
+					<ul class="buttons"
+			><li class="horizontal action"><input type="image"
+				class="imgButton " id="addAction"
+				src="WebContent/public/media/images/actions/ActionIcon_Add_Link_18x18.gif" 
+				alt="add" 
+				onmouseover="return actionBttns.mouseoverImg(event, 'addAction');"
+				onmouseout="return actionBttns.mouseoutImg(event, 'addAction');"
+				onmousedown="return actionBttns.mousedownImg(event, 'addAction');" 
+				onmouseup="teleConActions.add(event); return actionBttns.mouseupImg(event, 'addAction');" 
+			/></li
+			><li class="horizontal action"><input type="image"
+				class="imgButton " id="removeAction"
+				src="WebContent/public/media/images/actions/ActionIcon_Remove_UA_18x18.gif" 
+				alt="remove" 
+				onmouseover="return actionBttns.mouseoverImg(event, 'removeAction');"
+				onmouseout="return actionBttns.mouseoutImg(event, 'removeAction');"
+				onmousedown="return actionBttns.mousedownImg(event, 'removeAction');" 
+				onmouseup="teleConActions.remove(event); return actionBttns.mouseupImg(event, 'removeAction');" 
+			/></li
+			
+			><li class="horizontal action"><input type="image"
+				class="imgButton " id="openAction"
+				src="WebContent/public/media/images/actions/ActionIcon_Open_UA_18x18.gif" 
+				alt="remove" 
+				onmouseover="return actionBttns.mouseoverImg(event, 'openAction');"
+				onmouseout="return actionBttns.mouseoutImg(event, 'openAction');"
+				onmousedown="return actionBttns.mousedownImg(event, 'openAction');" 
+				onmouseup="teleConActions.open(event); return actionBttns.mouseupImg(event, 'openAction');" 
+			/></li
+
+			
+			
+			><li class="horizontal action"><input type="button"  disabled="disabled" 
+				class="textButton " id="transferAction" value="Transfer"
+				onmouseover="return actionBttns.mouseover(event, 'transferAction');" 
+				onmouseout="return actionBttns.mouseout(event, 'transferAction');" 
+				onmousedown="return actionBttns.mousedown(event, 'transferAction');" 
+				onmouseup="teleConActions.transfer(event); return actionBttns.mouseup(event, 'transferAction');" 
+			/></li
+			><li class="horizontal action"><input type="button" disabled="disabled" 
+				class="textButton " id="notesAction" value="Notes" 
+				onmouseover="return actionBttns.mouseover(event, 'notesAction');" 
+				onmouseout="return actionBttns.mouseout(event, 'notesAction');" 
+				onmousedown="return actionBttns.mousedown(event, 'notesAction');" 
+				onmouseup="teleConActions.notes(event); return actionBttns.mouseup(event, 'notesAction');" 
+			/></li
+			><li class="horizontal action"><input type="button" disabled="disabled" 
+				class="textButton " id="editPhoneAction" value="Edit Phone #" 
+				onmouseover="return actionBttns.mouseover(event, 'editPhoneAction');" 
+				onmouseout="return actionBttns.mouseout(event, 'editPhoneAction');" 
+				onmousedown="return actionBttns.mousedown(event, 'editPhoneAction');" 
+				onmouseup="teleConActions.callback(event); return actionBttns.mouseup(event, 'editPhoneAction');" 
+			/></li
+			><li class="horizontal action"><input type="button"  
+				class="textButton " id="providersAction" value="Providers" disabled="disabled" 
+				onmouseover="return actionBttns.mouseover(event, 'providersAction');" 
+				onmouseout="return actionBttns.mouseout(event, 'providersAction');" 
+				onmousedown="return actionBttns.mousedown(event, 'providersAction');" 
+				onmouseup="return actionBttns.mouseup(event, 'providersAction');" 
+			/></li
+			><li class="horizontal action"><input type="button" disabled="disabled" 
+				class="textButton " id="signEncountersAction" 
+				value="Sign Encounters" 
+				onmouseover="return actionBttns.mouseover(event, 'signEncountersAction');" 
+				onmouseout="return actionBttns.mouseout(event, 'signEncountersAction');" 
+				onmousedown="return actionBttns.mousedown(event, 'signEncountersAction');" 
+				onmouseup="return actionBttns.mouseup(event, 'signEncountersAction');" 
+			/></li
+			><li class="horizontal buttonBreak action"><input type="image"
+				class="verticalRule" disabled="disabled"
+				src="WebContent/public/media/images/actions/ActionBar_Vertical_Rule_3x18.gif"
+				alt="vertical rule" 
+			/></li
+			><li class="horizontal action"><input type="image"
+				class="imgButton " id="refreshAction"
+				src="WebContent/public/media/images/actions/ActionIcon_Refresh_Link_18x18.gif" 
+				alt="refresh" 
+				onmouseover="return actionBttns.mouseoverImg(event, 'refreshAction');"
+				onmouseout="return actionBttns.mouseoutImg(event, 'refreshAction');"
+				onmousedown="return actionBttns.mousedownImg(event, 'refreshAction');" 
+				onmouseup="teleConActions.refresh(event); return actionBttns.mouseupImg(event, 'refreshAction');" 
+			/></li
+			><li class="horizontal action"><input type="image"
+				class="imgButton " id="optionAction"
+				src="WebContent/public/media/images/actions/ActionIcon_Option_UA_18x18.gif" 
+				alt="option" 
+				onmouseover="return actionBttns.mouseoverImg(event, 'optionAction');"
+				onmouseout="return actionBttns.mouseoutImg(event, 'optionAction');"
+				onmousedown="return actionBttns.mousedownImg(event, 'optionAction');" 
+				onmouseup="return actionBttns.mouseupImg(event, 'optionAction');" 
+			/></li
+			><li class="horizontal action"><input type="image"
+				class="imgButton " id="printAction" 
+				src="WebContent/public/media/images/actions/ActionIcon_Print_UA_47x18.gif" 
+				alt="print" 
+				onmouseover="return actionBttns.mouseoverImg(event, 'printAction');"
+				onmouseout="return actionBttns.mouseoutImg(event, 'printAction');"
+				onmousedown="return actionBttns.mousedownImg(event, 'printAction');" 
+				onmouseup="return actionBttns.mouseupImg(event, 'printAction');" 
+			/></li
+
+		></ul>
+		</div>
+		<div class="contentFrame">
+			<div class="contentViewport" >
+
+				<div id="consultsContainer" da="" vu="dayView"> 
+	
+					<div class="apptTop">
+						<input type="button" value="Change Selections" />
+						<div class="msg">Telephone consults for All Providers in All My Clinics for Today only Any Status.</div>
+					</div>
+
+					<div class="apptMid">
+						<div class="patientPanel">
+							<div class="heading">Patient</div>
+							<div class="patientContainer" id="patientContainerId" style="overflow-x: hidden;" ></div>
+						</div>
+						
+						<div class="cal">
+							<div class="calControls">
+								<ul><li><a id="cal_back_month" href="" 
+									onclick="consults.previousMonth(event);" 
+								> </a></li>
+								<li><a id="cal_today_anchor" href="" 
+									onclick="consults.today(event);" 
+								> </a></li>
+								<li><a id="cal_next_month" href="" 
+									onclick="consults.nextMonth(event);" 
+								> </a></li></ul>
+							</div>
+							<div id="page_calendar-shell"></div>		
+						</div>
+
+						<div class="curView" id="mainCalendarDisplay" ><div></div></div
+						><div class="patDat"
+							><div class="header">Patient's Data</div
+							><div class="patRec" id="apptPatRecId" ></div
+						></div>
+					</div>
+
+					<div class="apptBot">
+						<div class="buttonBar">
+							<ul
+								><li
+								><a id="previousButton" href="#" 
+									onclick="consults.previousMonth(event);" ></a></li>
+							<li><a id="dayButton" href="#" onclick="consults.curViewChange(event,   'dayView');" ></a></li>
+							<li><a id="weekButton" href="#" onclick="consults.curViewChange(event,  'weekView');" ></a></li>
+							<li><a id="monthButton" href="#" onclick="consults.curViewChange(event, 'monthView');" ></a></li>
+							<li><a id="nextButton" href="#" onclick="consults.nextMonth(event);"></a></li></ul>
+						</div>
+					</div>
+				</div> <!-- .appointmentsContainer -->
+
+			</div> <!-- end content viewport -->
+		</div> <!-- end content frame  -->
+	</form> <!-- end form wrapper --> 
+</div> <!-- end searchContainer -->
+

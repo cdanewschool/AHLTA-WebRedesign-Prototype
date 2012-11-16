@@ -1,0 +1,453 @@
+
+.contentContainer { /*font-family: "Gill Sans", Trebuchet, sans-serif, serif;*/ font-size: 10px;}
+.contentContainer div.title { background-color: transparent; }
+#appointmentsContainer {position: absolute; height: 610px; width: 792px; left: 0px; top: 0px; margin: 5px;	}
+#consultsContainer {position: absolute; height: 610px; width: 792px; left: 0px; top: 0px; margin: 5px;	}
+div.contentContainer div.apptTop { height: 64px; width: 98%; position: relative;} 
+div.contentContainer div.apptBot {	height: 76px;width: 98%;	position: relative;} 
+div.contentContainer div.apptMid {	height: 470px;	width: 98%;		position: relative;} 
+div.contentContainer div.apptTop input {	font-family: "Helvetica Neue", Arial, sans-serif;
+	position: relative; width: 115px; top: 11px;left: 11px;	font-size: 10px; }
+div.contentContainer div.apptTop div.msg {clear: left;position: relative;width: 400px;
+	overflow: hidden; left: 140px;	top: -8px;	white-space: nowrap;}
+
+div.contentContainer div.apptBot div.buttonBar {	height: 20px;	width: 167px; /*	border-top: solid #000 1px;	border-bottom: solid #000 1px;*/
+	font-family: "Helvetica Neue", Arial, sans-serif;	background-color: #E6E6E1;		position: relative;	left: 310px;	top: 35px;}
+div.contentContainer div.apptBot div.buttonBar ul {	height: 20px; position: absolute; width: 167px; line-height: 20px;	white-space: nowrap;
+	margin: 0;	padding: 0;}
+div.contentContainer div.apptBot div.buttonBar ul li {	position: relative; list-style-type: none;
+	display: inline;	float: left;	margin: 0;	padding: 0;	text-align: center; vertical-align: middle; }
+/*	
+div.contentContainer#appointments div.apptBot div.buttonBar ul li.q a {	width: 18px;position: relative; 
+	width: 18px;	margin: 0;	padding: 0;}
+div.contentContainer#appointments div.apptBot div.buttonBar ul li.q#first a {	border-left: 1px solid black;
+	-moz-border-radius: 5%; -moz-border-radius-bottomleft: 5%;}
+*/
+
+div.contentContainer div.apptBot div.buttonBar ul li a {position: relative; /* width:48px;	*/
+	margin: 0;	padding: 0;	display: -moz-inline-box; outline: none; display: inline-block; 
+	text-decoration: none;	/*border-right: 1px solid black; color: black;*/ }
+
+div.contentContainer div.apptBot div.buttonBar ul li a#previousButton { background-image: url(../../media/images/appointments/back_link.gif); width: 19px; height: 20px; }
+div.contentContainer div.apptBot div.buttonBar ul li a#nextButton { background-image: url(../../media/images/appointments/next_link.gif); width: 19px; height: 20px; }
+
+div.contentContainer div.apptBot div.buttonBar ul li a#previousButton:hover { background-image: url(../../media/images/appointments/back_hover.gif); width: 19px; height: 20px; }
+div.contentContainer div.apptBot div.buttonBar ul li a#nextButton:hover { background-image: url(../../media/images/appointments/next_hover.gif); width: 19px; height: 20px; }
+div.contentContainer div.apptBot div.buttonBar ul li a#previousButton:active { top: 1px; background-image: url(../../media/images/appointments/back_active.gif); width: 19px; height: 20px; }
+div.contentContainer div.apptBot div.buttonBar ul li a#nextButton:active {top: 1px;  background-image: url(../../media/images/appointments/next_active.gif); width: 19px; height: 20px; }
+
+
+div.contentContainer div.apptBot div.buttonBar ul li a#dayButton { background-image: url(../../media/images/appointments/day_link.gif); width: 43px; height: 20px; }
+div.contentContainer div.apptBot div.buttonBar ul li a#weekButton { background-image: url(../../media/images/appointments/week_link.gif); width: 43px; height: 20px; }
+div.contentContainer div.apptBot div.buttonBar ul li a#monthButton { background-image: url(../../media/images/appointments/month_link.gif); width: 43px; height: 20px; }
+
+div.contentContainer div.apptBot div.buttonBar ul li a#dayButton.curSel { background-image: url(../../media/images/appointments/day_hover.gif); width: 43px; height: 20px; }
+div.contentContainer div.apptBot div.buttonBar ul li a#weekButton.curSel { background-image: url(../../media/images/appointments/week_hover.gif); width: 43px; height: 20px; }
+div.contentContainer div.apptBot div.buttonBar ul li a#monthButton.curSel { background-image: url(../../media/images/appointments/month_hover.gif); width: 43px; height: 20px; }
+
+
+div.contentContainer div.apptBot div.buttonBar ul li a#dayButton:hover { background-image: url(../../media/images/appointments/day_hover.gif); width: 43px; height: 20px; }
+div.contentContainer div.apptBot div.buttonBar ul li a#weekButton:hover { background-image: url(../../media/images/appointments/week_hover.gif); width: 43px; height: 20px; }
+div.contentContainer div.apptBot div.buttonBar ul li a#monthButton:hover { background-image: url(../../media/images/appointments/month_hover.gif); width: 43px; height: 20px; }
+
+div.contentContainer div.apptBot div.buttonBar ul li a#dayButton:active { top: 1px; background-image: url(../../media/images/appointments/day_active.gif); width: 43px; height: 20px; }
+div.contentContainer div.apptBot div.buttonBar ul li a#weekButton:active { top: 1px; background-image: url(../../media/images/appointments/week_active.gif); width: 43px; height: 20px; }
+div.contentContainer div.apptBot div.buttonBar ul li a#monthButton:active { top: 1px; background-image: url(../../media/images/appointments/month_active.gif); width: 43px; height: 20px; }
+
+.currentButton {		color: #FFF;	background-color: #33CCCC; outline: none; }
+
+div.contentContainer div.apptBot div.controls input { 	padding-left: 0px; padding-right: 0px; 	width: 48px; 	margin: 0px; }
+div.contentContainer div.apptMid div.patientPanel { 	
+	position: absolute; left: 5px; 	width : 121px; 	height: 274px; 	
+	border: 1px solid black; background-color: white;}
+div.contentContainer div.apptMid div.patientPanel div.heading {	
+	position: relative;
+	width : 121px; 	height: 15px; 	border-bottom: 1px solid black;
+	background-color: #DEE6DD; 	text-align: center; }
+div.contentContainer div.apptMid div.patientPanel div.patientContainer ul { 
+	position: relative; width : 121px; height: 262px; 
+	margin : 0;	padding : 0;	white-space: nowrap; 
+	}
+div.contentContainer div.apptMid div.patientPanel div.patientContainer ul li { 
+	position: relative; left: 0; width : 121px; height: 20px; 
+	list-style-type: none;
+}
+ 
+div.contentContainer div.apptMid div.patientPanel div.patientContainer ul li a {
+	text-decoration: none; 	
+	outline: none;
+	display: block;
+	position: relative;
+	top: 0; left: 0;
+	padding-left:  7px ; padding-top: 3px; 	padding-bottom: 2px; 
+	width : 114px;	height: 15px;	/*float:left;*/ 
+	color: black;
+	background-color: transparent;
+} 
+div.contentContainer div.apptMid div.patientPanel div.patientContainer ul li a:active { 
+	background-color: #00AEEF; color: white; outline: none;}
+div.contentContainer div.apptMid div.patientPanel div.patientContainer ul li a:hover { 
+	background-color: #00AEEF; color: white; outline: none;}
+div.contentContainer div.apptMid div.patientPanel div.patientContainer ul li a.selClient { background-color: #00AEEF;
+	color: white; }
+
+div.contentContainer div.apptMid div.cal {	position: absolute;	left: 5px; top: 281px;
+	width : 121px;	height: 170px;	border: 1px solid black; }
+
+div.contentContainer div.apptMid div.cal div.calControls {	width : 119px; 	height: 17px; 	/*border-bottom: 1px solid black;*/
+ 	background-color: #DEE6DD; 	text-align: center; position: relative }
+ 	
+div.contentContainer div.apptMid div.cal div.calControls ul { position: absolute; top: 0; left: 0;
+	width : 121px; 	height: 17px; float: left;
+ 	margin : 0px; padding : 0px; white-space: nowrap;	display: inline; list-style-type:none; }
+/*div.contentContainer#appointments div.apptMid div.cal div.calControls ul li.first {	border-left: none;}  */
+div.contentContainer div.apptMid div.cal div.calControls ul li { float: left; position: relative;	
+	display: inline-block; display: -moz-inline-box ; display: inline; /*border-left: 1px solid black; */
+	margin : 0px; padding : 0px;  width: 40px; height: 17px;}
+	
+	
+div.contentContainer div.apptMid div.cal div.calControls ul li a {	
+	position: relative;margin : 0px; padding : 0px;
+ 	min-width: 40px; width: 40px; /*padding-top: 2px; padding-bottom: 1px; padding-left:18px; padding-right: 17px; */
+ 	text-decoration: none; color: white; height: 17px;
+	vertical-align: middle; text-align: center; background-repeat: no-repeat;
+	display: -moz-inline-box; outline: none; display: inline-block; }
+	
+div.contentContainer div.apptMid div.cal div.calControls ul li a#cal_back_month { background-image: url(../../media/images/appointments/calender_back_link.gif); width: 40px; height: 17px; }
+div.contentContainer div.apptMid div.cal div.calControls ul li a#cal_today_anchor { background-image: url(../../media/images/appointments/calender_today_link.gif); width: 41px; height: 17px;	}
+div.contentContainer div.apptMid div.cal div.calControls ul li a#cal_next_month { background-image: url(../../media/images/appointments/calender_next_link.gif); width: 40px; height: 17px; }
+ 		
+div.contentContainer div.apptMid div.cal div.calControls ul li a#cal_back_month:hover { background-image: url(../../media/images/appointments/calender_back_hover.gif); width: 40px; height: 17px; }
+div.contentContainer div.apptMid div.cal div.calControls ul li a#cal_today_anchor:hover { background-image: url(../../media/images/appointments/calender_today_hover.gif); width: 41px; height: 17px; }
+div.contentContainer div.apptMid div.cal div.calControls ul li a#cal_next_month:hover { background-image: url(../../media/images/appointments/calender_next_hover.gif); width: 40px; height: 17px; }
+
+div.contentContainer div.apptMid div.cal div.calControls ul li a#cal_back_month:active { top: 1px; background-image: url(../../media/images/appointments/calender_back_active.gif); width: 40px; height: 17px; }
+div.contentContainer div.apptMid div.cal div.calControls ul li a#cal_today_anchor:active { top: 1px; background-image: url(../../media/images/appointments/calender_today_active.gif); width: 41px; height: 17px; }
+div.contentContainer div.apptMid div.cal div.calControls ul li a#cal_next_month:active { top: 1px; background-image: url(../../media/images/appointments/calender_next_active.gif); width: 40px; height: 17px;}
+ 		
+ 		
+div.contentContainer div.apptMid div.cal div.calControls ul li a:active {  background-color: #00AEEF;	color: white; }
+div.contentContainer div.apptMid div.cal div.calControls ul li a:hover {  background-color: #00AEEF;	color: white; }
+
+
+
+
+
+.calendarContainer {width:119px;height:153px;position:relative; background-color: #fff; color: #000; }
+.calendarContainer a,
+.calendarContainer a:link,
+.calendarContainer a:visited,
+.calendarContainer a:hover,
+.calendarContainer a:active {text-decoration:none;	border:none;}
+
+/*** calendar controls ***/
+.calendarControls {	background:transparent }
+.calendarControls span {display:inline;	}
+.calendarControls .calendarIndicator {display:block;position:relative;padding:5px 0 0 0;text-align:center;width:119px;top:2px;font-size:11px;}
+.calendarControl {display:block;position:absolute;text-align:center;height:15px;width:15px;	top:2px;color:#fff;	}
+
+/*** styling common to year and month navigation ***/
+.calendarControls .previousMonth,
+.calendarControls .nextMonth {	display: none; top:5px;font-size:13px;	color:#bbb;	}
+		
+.calendarControls .previousYear,
+.calendarControls .nextYear {display: none;} 
+
+.calendarControls .previousMonthOver,
+.calendarControls .nextMonthOver,
+.calendarControls .previousYearOver,
+.calendarControls .nextYearOver {color:#ddd;text-decoration:none;}
+		
+.calendarControls .previousMonthActive,
+.calendarControls .nextMonthActive,
+.calendarControls .previousYearActive,
+.calendarControls .nextYearActive {	color:#fff;	text-decoration:none;}
+		
+.calendarControls .previousMonthGrayed,
+.calendarControls .nextMonthGrayed,
+.calendarControls .previousYearGrayed,
+.calendarControls .nextYearGrayed {	color:#333;	text-decoration:none; }
+
+/*** styling specific to month navigation ***/
+.calendarControls .previousMonth {	left:19px;	}
+.calendarControls .nextMonth {right:19px;}
+
+/*** styling specific to year navigation ***/
+.calendarControls .previousYear,
+.calendarControls .nextYear {font-size:18px;top:1px;}
+.calendarControls .previousYear {left:4px;}
+.calendarControls .nextYear {right:4px;	}
+
+/*** grid ***/
+div.calendarGrid {	text-align:center;	}
+div.calendarGrid td {	padding:3px 5px;font-size:10px;	}
+.calendarGrid th {	border: none; padding:2px 2px; font-size:8px;	}
+div.calendarGrid td a {	background-color: #EBF2EB; color: #000; }
+div.calendarGrid td a:hover {	background-color: #00AEEF;	color:#fff;	}
+div.calendarGrid td.selected a {background-color: #DEE6DD; color: white; }
+div.calendarGrid td.selected {background-color: transparent; }
+div.contentContainer div.apptMid div.patientPanel div.patientContainer ul li a {
+
+}
+div.calendarGrid td.grayed {color:#444;	}
+table.calendarGrid { width:119px; border-collapse:collapse; }
+
+	
+table.calendarGrid td {	border:0px;		padding:0;	}
+
+
+
+
+
+
+
+
+
+
+div.contentContainer div.apptMid div.curView {	
+	position: absolute; left: 138px; top: 0; 
+	height: 448px;	width : 458px;	
+	margin:0; padding:0;
+}
+	
+div.contentContainer div.apptMid div.curView div {	
+	position: relative;	top:0; left: 0;
+	height: 440px;	width : 458px;	
+}
+div.contentContainer div.apptMid div.curView div.curViewHeading { 
+	position: relative;	left: 0px; top: 0px;
+	width : 456px; height: 15px;
+	border: 0.063em solid black; 
+	background-color: #DEE6DD;	
+}
+	
+div.contentContainer div.apptMid div.curView div.curViewHeading div.yr {	
+	position: absolute;	top: 0px; left: 0px; width:	50px;
+	height: 15px; vertical-align: middle; text-align: center;}
+	
+div.contentContainer div.apptMid div.curView div.curViewHeading div.dayMo {	
+	left: 50px;	position: absolute;	display: inline;	width: 399px;
+	border-left: 0.063em solid black;	height: 15px;	vertical-align: middle; 	text-align: center;	}
+
+div.contentContainer div.apptMid div.curView div.curViewHeading div.weekViewHead {	
+	border-left: 1px solid black; white-space: nowrap; 
+	position: relative; left: 50px; 
+	/*float: left; */
+	width: 6.355em;
+	display: -moz-inline-box;  
+	display: inline-block; 
+	height: 15px;	
+	vertical-align: middle; 	text-align: center;	font-size: 9px;}
+
+
+
+
+div.contentContainer div.apptMid div.curView div.curViewBody {	background-color: transparent;
+	position: relative;	width : 456px;	left: 0px;	top: 3px; height: 432px;
+	overflow-y: auto; overflow-x: hidden; border: 1px solid black; 
+}
+
+div.contentContainer div.apptMid div.curView div.curViewBody table { position: relative;
+	top: 0px;	background-color: white; width : 440px;	
+	border-collapse: collapse;  
+}
+div.contentContainer div.apptMid div.curView div.curViewBody table tbody {	
+	position: relative;width : 435px;	
+}
+div.contentContainer div.apptMid div.curView div.curViewBody table tbody tr {	
+	position: relative; width : 435px;	margin: 0px; height: 21px; }
+div.contentContainer div.apptMid div.curView div.curViewBody table tbody tr td { 
+	position: relative; left: 0px; top: 0px; 
+	 
+	padding: 0px;  
+ 	border-top: 1px transparent solid;
+ 	border-bottom: 1px transparent solid;
+ 	border-left: 1px transparent solid;
+ 	border-right: 1px black solid;
+ 	
+ 	text-align: right;white-space: nowrap; line-height: 20px; }
+div.contentContainer div.apptMid div.curView div.curViewBody table tbody tr td div { 
+	width: 46px;  height: 20px; padding: 0px 2px;  
+}
+div.contentContainer div.apptMid div.curView div.curViewBody table tbody tr td div { 
+	width: 46px;  height: 20px; padding: 0px 2px;  
+}
+
+div.contentContainer div.apptMid div.curView div.curViewBody table tbody tr td+td {
+	width: 389px; margin: 0;
+	border-left: 1px black solid; 
+	border-bottom: 1px black dotted; 
+	border-right: none; 
+	border-top: none; 
+ 	text-align: left;	vertical-align: middle;	 white-space: nowrap;
+ 	line-height: 15px; }
+
+div.contentContainer div.apptMid div.curView div.curViewBody table tbody tr td+td a {
+	text-decoration: none; outline: none; color: black; }
+
+ 	
+ 	
+ 	 	
+div.contentContainer div.apptMid div.curView div.curViewBody table tbody tr td+td.hour { 
+	border-bottom: 1px black solid;	}
+	
+div.contentContainer div.apptMid div.curView div.curViewBody table tbody tr td+td.hasApptSolid { 
+	border-bottom: 1px solid black; border-left: 1px black solid; }
+
+div.contentContainer div.apptMid div.curView div.curViewBody table tbody tr td+td.hasApptSolid div { 
+	padding-left: 4px; background-color: #EBF2EB; }
+
+div.contentContainer div.apptMid div.curView div.curViewBody table tbody tr td+td.hasApptDotted { 
+	border-bottom: 1px dotted black; border-left: 1px black solid; }
+
+div.contentContainer div.apptMid div.curView div.curViewBody table tbody tr td+td.hasApptDotted div { 
+	padding-left: 4px; background-color: #EBF2EB; }
+
+	
+div.contentContainer div.apptMid div.curView div.curViewBody table.weekView tbody tr td+td {
+	 padding: 0; margin: 0;}
+div.contentContainer div.apptMid div.curView div.curViewBody table.weekView tbody tr td+td.saturday { 
+		}
+div.contentContainer div.apptMid div.curView div.curViewBody table.weekView tbody tr td+td.saturday div { 
+	width: 40px;	}
+div.contentContainer div.apptMid div.curView div.curViewBody table tbody tr td.curDay { 
+	background-color: #EBF2EB;	}
+
+div.contentContainer div.apptMid div.curView table tbody tr td.curDay { 
+	background-color: #EBF2EB;	}
+
+	
+div.contentContainer div.apptMid div.curView div.curViewBody table.dayView tbody tr td+td div {
+	width: 383px; height: 20px; line-height: 15px; 
+	overflow-x: hidden; vertical-align: middle; 
+	position: relative; 
+}
+
+	
+	
+		
+div.contentContainer div.apptMid div.curView div.curViewBody table.weekView tbody tr td+td div {
+	width: 5.32em; height: 20px; line-height: 15px; 
+	overflow-x: hidden; vertical-align: middle; 
+	position: relative; }
+	
+div.contentContainer div.apptMid div.curView div.curViewBody table.weekView tbody tr td+td a div {
+	background-color: #DEE6DD; position: relative; text-decoration: none; outline: none; color: black; }
+div.contentContainer div.apptMid div.curView div.curViewBody table.weekView tbody tr td+td a:hover div {
+	background-color: #00AEEF; color: white; text-decoration: none; outline: none;}
+div.contentContainer div.apptMid div.curView div.curViewBody table.weekView tbody tr td+td a:active div {
+	background-color: #00AEEF; color: white; text-decoration: none; outline: none; }
+div.contentContainer div.apptMid div.curView div.curViewBody table.weekView tbody tr td+td div.curDay {
+	background-color: #EBF2EB; }
+	
+div.contentContainer div.apptMid div.curView div.curViewBody table tbody tr td+td a div.selectedClient { background-color: #00AEEF;
+	color: white; }
+	
+div.contentContainer div.apptMid div.curView table.monthView tbody tr td ul li a div.selectedClient { background-color: #00AEEF;
+	color: white; }
+	
+	
+	
+div.contentContainer div.apptMid div.curView div.curViewBody table.weekView tbody tr td+td.hasApptSolid {
+	background-color: #EBF2EB; border-bottom: 1px solid black; border-left: 1px black solid;  }
+div.contentContainer div.apptMid div.curView div.curViewBody table.weekView tbody tr td+td.hasApptDotted {
+	background-color: #EBF2EB; border-bottom: 1px dotted black; border-left: 1px black solid;  }
+
+
+	
+	
+	
+	
+	
+div.contentContainer div.apptMid div.curView div.monthWrap {position: absolute; left: 1px; top: 1px; 
+	width : 451px; height: 452px; border: 1px solid black; }
+
+
+div.contentContainer div.apptMid div.curView table.monthView {position: absolute; left: 1px; top: 12px; width : 450px; 
+	background-color: white; border-collapse: collapse;
+	
+	border-top: none;
+	
+/*	border-left: 1px solid black;
+	border-bottom: 1px solid black;
+	border-right: 1px solid black; */
+	height: 440px;}
+/* div.contentContainer#appointments div.apptMid div.curView table.monthView caption { width: 450px; margin: -1px; text-align: center; background-color: white; */
+div.contentContainer div.apptMid div.curView div.caption { position: absolute; top : 0px; left: 0px; height: 12px; width: 449px; text-align: center; background-color: white;
+/*	border-left: 1px solid black;border-top: 1px solid black;border-right: 1px solid black; border-bottom: none;*/
+	font-weight: bold; }
+div.contentContainer div.apptMid div.curView table.monthView tr.header { height: 23px; line-height: 20px;}
+div.contentContainer div.apptMid div.curView table.monthView tr.header th { 
+	height: 20px; border: none; line-height: 20px;  }
+div.contentContainer div.apptMid div.curView table.monthView tr { height: 63px; width: 435px; }
+div.contentContainer div.apptMid div.curView table.monthView tr td { 
+	border-top: 1px solid black;
+	border-bottom: none;
+	border-left: 1px solid black;
+	border-right: none;
+	vertical-align: top; text-align: right; width: 61px; }
+div.contentContainer div.apptMid div.curView table.monthView tr td.nextMonthDay { 
+	color: gray;
+}
+div.contentContainer div.apptMid div.curView table.monthView tr td.noLeftBrdr {
+	border-left: none;
+}
+
+div.contentContainer div.apptMid div.curView table.monthView tr td ul { 
+	list-style: none; 	margin : 0px;
+	padding : 0px;	white-space: nowrap;	
+	text-align: left;
+}
+div.contentContainer div.apptMid div.curView table.monthView tr td ul li { 
+	margin : 0px;	padding : 0px;  white-space: nowrap; line-height: 14px; background-color: #DEE6DD;
+}
+
+div.contentContainer div.apptMid div.curView table.monthView tr td ul li a {
+	 text-decoration: none;vertical-align: middle; text-align: center; outline: none;
+	 white-space: nowrap; color: black;	 white-space: nowrap;outline: none;
+
+}
+
+div.contentContainer div.apptMid div.curView table.monthView tr td ul li a div {
+	 overflow-x: hidden; width:61px; height: 14px;
+	 white-space: nowrap; outline: none;
+	 
+}
+
+div.contentContainer div.apptMid div.curView table.monthView tr td ul li a:active div {
+	 text-decoration: none;vertical-align: middle; text-align: center; 
+	 white-space: nowrap;outline: none;
+	 background-color: #00AEEF; color: white;
+}
+div.contentContainer div.apptMid div.curView table.monthView tr td ul li a:hover div {
+	 text-decoration: none;vertical-align: middle; text-align: center; 
+	 white-space: nowrap;outline: none;
+	 background-color: #00AEEF; color: white;
+}
+
+
+div.contentContainer div.apptMid div.patDat {	position: absolute ; left: 605px; top: 0; width : 174px;	
+	border:1px solid black; height: 451px; 	 background-color: white; }
+div.contentContainer div.apptMid div.patDat div.header { text-align: center;
+	position: relative ; width : 174px; height: 15px; border-bottom: 1px solid black; background-color: #DEE6DD; }
+div.contentContainer div.apptMid div.patDat div.patRec {padding: 0px; position: relative; width: 174px ; }
+div.contentContainer div.apptMid div.patDat div.patRec table { width: 174px; border: none; border-collapse: collapse; table-layout: fixed; }
+div.contentContainer div.apptMid div.patDat div.patRec table tr {width: 157px;}
+div.contentContainer div.apptMid div.patDat div.patRec table tr.twenty {height: 20px; }
+div.contentContainer div.apptMid div.patDat div.patRec table tr.twelve {height: 12px; }
+div.contentContainer div.apptMid div.patDat div.patRec table tr.thirteen {height: 13px; }
+div.contentContainer div.apptMid div.patDat div.patRec table tr.sixteen {height: 16px;  }
+div.contentContainer div.apptMid div.patDat div.patRec table tr.twentyTwo {height: 22px;  }
+div.contentContainer div.apptMid div.patDat div.patRec table tr.thirtyNine {height: 39px;  }
+div.contentContainer div.apptMid div.patDat div.patRec table tr.fifty {height: 50px; vertical-align: top; }
+div.contentContainer div.apptMid div.patDat div.patRec table tr.seventyEight {height: 76px;   vertical-align: top; }
+div.contentContainer div.apptMid div.patDat div.patRec table tr.bottomBorder { border-bottom: 1px solid black; }
+
+div.contentContainer div.apptMid div.patDat div.patRec table tr td {font-weight: bold; padding-right: 3px; 
+	width: 33%; border: none; text-align: right; font-size: 8px; line-height: 10px; height: 10px; 
+	white-space: nowrap; vertical-align: top; } 
+div.contentContainer div.apptMid div.patDat div.patRec table tr td+td {padding-left: 3px; width: 15px; 
+	text-align: left; font-weight: normal; white-space: nowrap;  overflow: hidden; } 
+div.contentContainer div.apptMid div.patDat div.patRec table tr td.patName {
+	text-align: center; font-size: 9px; vertical-align: middle; 
+	font-weight: bold;}

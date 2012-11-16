@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="edu.newschool.piim.model.teleCon">
+	<typedef name="TeleConUrgencyState" class="edu.newschool.piim.util.GenericEnumUserType">
+		<param name="enumClassName">edu.newschool.piim.model.teleCon.TeleConUrgencyState</param>
+	</typedef>
+	
+	<class name="TeleConClient" table="telecon" >
+		<id name="teleConId" column="telecon_id" type="int">
+            <generator class="native"/>
+        </id>
+		<property name="pawsPatUnitNbr" column="paws_pat_unit_nbr" type="string" />
+		<property name="clinicNcid" column="clinic_ncid" type="string" />
+		<property name="when" column="tc_start" type="timestamp" />
+		
+		<property name="providerId" column="provider_ncid" type="string" />
+		
+		<property name="callbackPhone" column="callback_phone" type="string" /> 
+		<property name="comments" column="comments" type="string" />
+		<property name="disposition" column="disposition" type="string" />
+		<property name="eandM" column="e_and_m" type="string" />
+		<property name="note" column="note" type="string" />
+		<property name="outPatientOk" column="outpatient_ok" type="boolean" />
+		<property name="reasonForVisit" column="reason_for_visit" type="string" />
+		
+		<property name="urgency" column="urgency" type="TeleConUrgencyState" />
+		
+		
+		<component name="discussed" 
+			class="TeleConDiscussed" 
+			lazy="false" 
+		>
+			<property name="alternatives" column="disc_alternatives" type="boolean" />
+			<property name="diagnosis" column="disc_diagnosis" type="boolean" />
+			<property name="medications" column="disc_medications" type="boolean" />
+			<property name="sideEffects" column="disc_side_effects" type="boolean" />
+			<property name="understood" column="disc_understood" type="string" />
+		</component>
+		<many-to-one name="followUp" class="TeleConClient" 
+			column="followup_telecon_id" unique="true" lazy="false"
+			
+		/>
+		<property name="forTx" column="for_tx" type="string" />
+		<property name="prn" column="prn" type="boolean" />
+		<property name="withPcm" column="with_pcm" type="boolean" />
+		<property name="apptStatus" column="appt_status" type="string" />
+	</class>
+	
+	
+</hibernate-mapping>

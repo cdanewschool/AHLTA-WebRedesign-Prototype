@@ -1,0 +1,15 @@
+.selectedPatient { position: absolute; top: 24px; left: 210px;
+	width: 814px; height: 24px;
+ 	background-color: #036D00; background-image: url(../images/briefProfile/gr_PatientInfo_Background_Green_1x24.gif);
+ 	background-repeat: repeat-x;
+ 	font-size: 12px; font-weight: normal; 
+ 	color: #FFFFFF; font-family: Georgia, Palatino , serif;
+	line-height: 24px; vertical-align: middle; }
+.patientProfile { font-size: 12px; font-weight: normal; color: #FFFFFF; 
+	line-height: 24px; height: 24px; vertical-align: middle; }
+	
+
+.profileBrief { font-size: 12px; font-weight: normal; color: #FFFFFF; 
+	line-height: 24px; height: 24px; vertical-align: middle;        padding-left: 11px; padding-right: 9px; }
+
+

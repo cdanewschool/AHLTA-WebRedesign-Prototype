@@ -1,0 +1,161 @@
+<div class="contentContainer" id="appointments" >
+	<form onSubmit=" return false;" action="" method="get">
+
+	<div class="title"> <h1>Appointments</h1> </div>
+	<div class="actions">
+		<ul class="buttons"
+			><li class="horizontal action"><input type="image"
+				class="imgButton " id="addAction"
+				src="WebContent/public/media/images/actions/ActionIcon_Add_Link_18x18.gif" 
+				alt="add" 
+				onmouseover="return actionBttns.mouseoverImg(event, 'addAction');"
+				onmouseout="return actionBttns.mouseoutImg(event, 'addAction');"
+				onmousedown="return actionBttns.mousedownImg(event, 'addAction');" 
+				onmouseup="apptActions.add(event); return actionBttns.mouseupImg(event, 'addAction');" 
+			/></li
+			><li class="horizontal action"
+				><input type="image" class="imgButton " id="removeAction"
+				src="WebContent/public/media/images/actions/ActionIcon_Remove_UA_18x18.gif" 
+				alt="remove"  disabled="disabled"
+				onmouseover="return actionBttns.mouseoverImg(event, 'removeAction');"
+				onmouseout="return actionBttns.mouseoutImg(event, 'removeAction');"
+				onmousedown="return actionBttns.mousedownImg(event, 'removeAction');" 
+				onmouseup="apptActions.remove(event, piimAppointments); return actionBttns.mouseupImg(event, 'removeAction');" 
+			/></li
+			><li class="horizontal action"><input type="button" 
+				class="textButton " id="checkinAction" value="Check-In"
+				disabled="disabled"
+				onmouseover="return actionBttns.mouseover(event, 'checkinAction');" 
+				onmouseout="return actionBttns.mouseout(event, 'checkinAction');" 
+				onmousedown="return actionBttns.mousedown(event, 'checkinAction');" 
+				onmouseup="apptActions.checkin(event); return actionBttns.mouseup(event, 'checkinAction');" 
+			/></li
+			><li class="horizontal action"><input type="button" 
+				class="textButton " id="checkoutAction" value="Check-Out"
+				disabled="disabled"
+				onmouseover="return actionBttns.mouseover(event, 'checkoutAction');" 
+				onmouseout="return actionBttns.mouseout(event, 'checkoutAction');" 
+				onmousedown="return actionBttns.mousedown(event, 'checkoutAction');" 
+				onmouseup="apptActions.checkout(event); return actionBttns.mouseup(event, 'checkoutAction');" 
+			/></li
+			><li class="horizontal action"><input type="button" 
+				class="textButton " id="transferAction" value="Transfer"
+				disabled="disabled"
+				onmouseover="return actionBttns.mouseover(event, 'transferAction');" 
+				onmouseout="return actionBttns.mouseout(event, 'transferAction');" 
+				onmousedown="return actionBttns.mousedown(event, 'transferAction');" 
+				onmouseup="apptActions.transfer(event); return actionBttns.mouseup(event, 'transferAction');" 
+			/></li
+			><li class="horizontal action"><input type="button"
+				disabled="disabled"
+				class="textButton " id="signEncAction" value="Sign Encounters" 
+				onmouseover="return actionBttns.mouseover(event, 'signEncAction');" 
+				onmouseout="return actionBttns.mouseout(event, 'signEncAction');" 
+				onmousedown="return actionBttns.mousedown(event, 'signEncAction');" 
+				onmouseup="apptActions.sign(event); return actionBttns.mouseup(event, 'signEncAction');" 
+			/></li
+			><li class="horizontal action"><input type="button"
+				class="textButton " id="providersAction" value="Providers" 
+				disabled="disabled"
+				onmouseover="return actionBttns.mouseover(event, 'providersAction');" 
+				onmouseout="return actionBttns.mouseout(event, 'providersAction');" 
+				onmousedown="return actionBttns.mousedown(event, 'providersAction');" 
+				onmouseup="return actionBttns.mouseup(event, 'providersAction');" 
+			/></li
+			><li class="horizontal action"><input type="button"
+				class="textButton " id="undoRemoveAction" value="Undo Remove" 
+				disabled="disabled"
+				onmouseover="return actionBttns.mouseover(event, 'undoRemoveAction');" 
+				onmouseout="return actionBttns.mouseout(event, 'undoRemoveAction');" 
+				onmousedown="return actionBttns.mousedown(event, 'undoRemoveAction');" 
+				onmouseup="apptActions.undoRemove(event); return actionBttns.mouseup(event, 'undoRemoveAction');" 
+			/></li
+			><li class="horizontal buttonBreak action"><input type="image"
+				class="verticalRule" disabled="disabled" alt="vertical rule" 
+				src="WebContent/public/media/images/actions/ActionBar_Vertical_Rule_3x18.gif"
+			/></li
+			><li class="horizontal action"><input type="image"
+				class="imgButton " id="refreshAction" alt="refresh" 
+				src="WebContent/public/media/images/actions/ActionIcon_Refresh_Link_18x18.gif" 
+				onmouseover="return actionBttns.mouseoverImg(event, 'refreshAction');"
+				onmouseout="return actionBttns.mouseoutImg(event, 'refreshAction');"
+				onmousedown="return actionBttns.mousedownImg(event, 'refreshAction');" 
+				onmouseup="apptActions.refresh(event); return actionBttns.mouseupImg(event, 'refreshAction');" 
+			/></li
+			><li class="horizontal action"><input type="image"
+				class="imgButton " id="optionAction" alt="option"  disabled="disabled"
+				src="WebContent/public/media/images/actions/ActionIcon_Option_UA_18x18.gif" 
+				onmouseover="return actionBttns.mouseoverImg(event, 'optionAction');"
+				onmouseout="return actionBttns.mouseoutImg(event, 'optionAction');"
+				onmousedown="return actionBttns.mousedownImg(event, 'optionAction');" 
+				onmouseup="return actionBttns.mouseupImg(event, 'optionAction');" 
+			/></li
+			><li class="horizontal action"><input type="image"
+				class="imgButton " id="printAction" alt="print"  disabled="disabled"
+				src="WebContent/public/media/images/actions/ActionIcon_Print_UA_47x18.gif" 
+				onmouseover="return actionBttns.mouseoverImg(event, 'printAction');"
+				onmouseout="return actionBttns.mouseoutImg(event, 'printAction');"
+				onmousedown="return actionBttns.mousedownImg(event, 'printAction');" 
+				onmouseup="return actionBttns.mouseupImg(event, 'printAction');" 
+			/></li
+
+		></ul>
+	</div>
+	<div class="contentFrame">
+		<div class="contentWndwPad entryAndDisplay fullborder " >
+				<div id="appointmentsContainer" da="" vu="dayView"> 
+					<div class="apptTop"
+						><input type="button" value="Change Selections" />
+						<div class="msg">Appointments for All Providers in All My Clinics for Today only Any Status.</div>
+					</div>
+
+					<div class="apptMid">
+						<div class="patientPanel">
+							<div class="heading">Patient</div>
+							<div class="patientContainer" id="patientContainerId" style="overflow-x: hidden;"></div>
+						</div>
+						<div class="cal">
+							<div class="calControls">
+								<ul
+									><li><a id="cal_back_month" href="" 
+									onclick="return piimAppointments.previousMonth(event);" ></a></li
+									><li><a id="cal_today_anchor" href="" 
+									onclick="return piimAppointments.today(event);" ></a></li
+									><li><a id="cal_next_month" href="" 
+									onclick="return piimAppointments.nextMonth(event);" ></a></li
+								></ul>
+							</div>
+							<div id="page_calendar-shell"></div>		
+						</div>
+
+						<div class="curView" id="mainCalendarDisplay" >
+							<div></div>
+						</div>
+						<div class="patDat">
+							<div class="header">Patient's Data</div>
+							<div class="patRec" id="apptPatRecId" ></div>
+						</div>
+					</div>
+	
+					<div class="apptBot">
+						<div class="buttonBar">
+							<ul
+								><li><a id="previousButton" href="" 
+								onclick="return piimAppointments.previousMonth(event);"></a></li
+								><li><a id="dayButton" href="" 
+								onclick="return piimAppointments.curViewChange(event, 'dayView');" ></a></li
+								><li><a id="weekButton" href="" 
+								onclick="return piimAppointments.curViewChange(event, 'weekView');" ></a></li
+								><li><a id="monthButton" href="" 
+								onclick="return piimAppointments.curViewChange(event, 'monthView');" ></a></li
+								><li><a id="nextButton" href="" 
+								onclick="return piimAppointments.nextMonth(event);"></a></li
+							></ul>
+						</div>
+					</div>
+				 </div> <!-- .appointmentsContainer -->
+		</div> <!-- end content viewport -->
+	</div> <!-- end content frame  -->
+	</form> <!-- end form wrapper --> 
+</div>
+

@@ -1,0 +1,392 @@
+#mainContentDisplay { position: absolute; top: 48px; left: 210px;
+	width: 814px; height: 696px; background-color: #fff; z-index: 0; }
+
+div.contentContainer { position: relative; left: 0px; top: 0px;
+	width: 814px; height: 696px;
+	font-weight: normal; font-size: 11px; 
+	font-family: Helvetica Neue, Arial, sans-serif; padding: 0px; 
+}
+div.contentContainer div.title { position: relative; left: 0px; top: 0px;
+	width: 814px; height: 12px ;
+	background-color: #DADBDB; 
+	font-family: Georgia, Palatino, serif ; 
+	padding-top: 6px; padding-bottom:6px;
+	vertical-align: middle;
+	overflow-y: visible;
+}
+div.contentContainer div.actions { 
+	position: relative; 
+	width: 799px; height: 18px; line-height: 18px; 
+	padding-top: 3px; padding-bottom: 3px; 
+	padding-left: 15px;
+	background-color: #DADBDB;
+}
+
+div.contentContainer div.title h1 {
+	font-weight: normal; color: #000; font-size: 12px; margin: 0px; 
+	padding-left: 11px; 
+}
+
+div.contentContainer div.contentFrame { position: relative;
+	width: 794px; height: 630px;
+	padding: 10px;
+}
+div.contentContainer div.contentViewport { 
+	position: relative; height: 630px; width: 794px;
+	background-color: #FFFCE5; border: 1px solid black;  
+}
+
+form fieldset { margin: 5px; border: none; padding: 0px; position: relative; }
+
+/*
+
+
+
+*/
+table { border-collapse: collapse; table-layout: auto; caption-side: top; }
+table, th, td { white-space: nowrap ; 
+	font-size: 10px; vertical-align: middle;  }
+.oneCent { width: 100px; } 
+.twoCent { width: 200px; min-width:110px;} 
+.threeCent { width: 300px; } 
+.fourCent { width: 400px; } 
+.fiveCent { width: 500px; }
+
+th { background-color: #DEE6DD; } 
+
+tr { 
+	background-color: 	transparent; 
+	height: 12px;
+	line-height: 12px;
+	font-size: 9px;  
+}
+
+tr.alternate { background-color: #DEE6DD; }
+td { padding-left: 4px; }
+
+.mainContent { height: 673px; padding: 10px;}
+.tabBar { height: 33px;	width: 794px; position: relative ; cursor: pointer; }
+.tab { position: relative; font-size: 12px;	float: left; top: 10px;	height: 23px; width: 115px;	line-height: 23px;	vertical-align: middle;	padding-left: 16px;
+	background-color: transparent;	background-image: url(../images/mainContent/tab_top_grey.gif);	background-repeat: no-repeat;
+	font-family: "Helvetica Neue", Arial, sans-serif;
+}
+.bottomPart center div br {line-height: 24px;}
+#colorBar {	position: relative;	width: 793px;	margin: 0px;	visibility : visible; 	background-color: #E6E6E6;	width: 100%;        height: 10px;}
+
+
+
+div.contentContainer div.contentFrame div#innerContent { position: relative; height: 581px; width: 815px; }
+.contentA {	position: relative; height: 561px;	 width: 772px;
+	background-color: #FCEBE1; border: solid 1px black; font-size: 10px; padding: 10px;	}
+.contentA #pt1 {	position: relative; height: 235px;	width: 782px; }
+.contentA #pt2 {	position: relative; padding: 10px; width: 762px;
+	margin-right: 10px; }
+.contentA #pt2 img { position: relative; padding: 0; width: 762px;
+	margin: 0; }
+.contentA #pt1 table {	position: relative; height: 215px; 
+	left: 0px;	width: 763px;	margin: 10px;
+	border: solid 1px black;
+	background-color: #DEE6DD;	border-collapse: collapse;
+	}
+.contentA * th {border-left: solid 1px black;	border-bottom: solid 1px black;	font-weight: bold;
+	padding-left: 12px;	padding-right: 12px; margin: 0px;}
+.contentA * .nohead1 {	width: 100px;}
+.contentA * .nohead2 {	width: 25px;}
+.contentA * tr td {	font-weight: normal; border-left: solid 1px black;	border-bottom: solid 1px black;	margin: 0px;
+	padding-left: 12px;	padding-right: 12px;	text-align: center;	background-color: #EBF2EB;	}
+.contentA * td.colHead { font-weight: bold; background-color: #DEE6DD;}
+.contentB { position: relative; background-color: #EBFAEB; border: solid 1px black; font-size: 10px; height: 561px;	padding: 10px; width: 782px;
+}
+.contentB form {	padding: 10px;	height: 575px;	width: 772px;}
+.contentB div.topPart {	line-height: 30px;
+	vertical-align: middle;
+	position: relative; top: 0px; left: 0px;
+	height: 40px; width: 750px;
+}
+
+
+input.radi {vertical-align: middle;}
+.col1 {	position: relative; float: left; width: 220px; height: 350px; border-right: outset 1px black; border-bottom: outset 1px black;  padding-left: 5px;}
+.col2 { float: left; width: 325px; border-right: outset 1px black; border-bottom: outset 1px black; height: 350px; padding-left: 5px; }
+.col3 { float: left; width: 200px; border-bottom: outset 1px black; height: 350px; padding-left: 10px; }
+.bottomPart { }
+.col3 table { width: 200px; border-collapse: collapse; border: 1px solid gray; font-size: 8px; }
+.col3 table caption {text-align: left; font-size: 10px; font-weight: bold; margin-bottom: 3px;}
+.col3 table th { border: 1px solid gray; font-size: 10px; background-color: #DEE6DD; }
+.col3 table td { border-bottom: 1px solid grey;  margin: 0px; }
+.col3 table tr { background-color: #EBF2EB; }
+.col3 table td.variable { text-align: right;  width: 39% ; padding-right: 5px; }
+.col3 table td.value { width: 59%; text-align: left;  border-left: 1px solid grey; padding-left: 5px; }
+.painSeverity { height: 320px; padding-left: 5px; border: none; 	padding-top: 5px;}
+.painSeverity .painScale{padding-top: 5px; float: left; width: 150px; font-size: 10px; vertical-align: middle; }
+.painSeverity .location { padding: 10px; float: left; }
+.habits { padding-left: 5px; border-bottom: outset 1px black; height: 60px; }
+.standardVitalSigns { border-bottom: outset 1px black; height: 160px; }
+.leading { position: relative; width: 98%; height: 3px;  }
+.heightWeight { padding-top: 8px; height: 235px; }
+.miniBr { height: 3px; width: 20px;}
+input.formInputText { font-size: 10px; color: #666; padding: 2px; border: solid 1px black; margin-right: 5px; height: 14px; line-height: 15px; vertical-align: middle; }
+input.formInputButton { font-family: Helvetica, san-serif; font-size: 11px; color: #333333; width: 60px; height:22px; background-color: #E6E6E6;  vertical-align: middle; text-align: center; padding: 1px; border: solid 1px black; cursor: pointer; }
+input.formInputButton:hover { color: white; background-color: #8BCFDD; }
+input.formInputButton:active { color: white; background-color: #8BCFDD; }
+#tabbedDisp { height: 200px; font-size: 14px; font-weight: normal; color: #123456; font-family: "Gill Sans", Trebuchet, sans-serif, serif; height: 24px; vertical-align: middle; padding: 10px; }
+label.fieldLabel {        display: inline;        float: none;	vertical-align: middle;}
+
+/* * * * * * * * * * * begin new results * * * * * * * * * * */
+
+button { position: relative; height: 14px; }
+div.contentContainer div.contentWndwPad { 
+	position: relative; height: 610px; width: 774px; padding: 10px; 
+}
+div.contentContainer div.contentWndwNoPad { 
+	position: relative; height: 610px; width: 794px;; 
+}
+
+.viewOnly{ background-color: #FCEBE1; }
+
+.entryAndDisplay { background-color: #FFFCE5; }
+
+.fullborder { border: 1px solid black; }
+
+.clearLeft { clear: left; }
+
+.horizontal { display: -moz-inline-box; display: inline-block; zoom:1; *display: inline; _height: 18px;}
+
+.pointer { cursor: pointer; }
+.displayFont { font-size: 12px; font-family: "Helvetica Neue", Arial, sans-serif; }
+.mainDisplay { position: relative; width: 778px; height: 585px;
+	padding-left: 7px; padding-right: 7px; padding-top: 10px;
+	border-top: none;
+	border-right: 1px solid black;
+	border-bottom: 1px solid black;
+	border-left: 1px solid black;
+}
+
+ul {list-style-type: none; padding: 0; margin: 0; }
+
+ul.buttons { position: relative ; width: 98%; 
+	padding: 0; margin: 0; vertical-align: middle; height: 18px; }
+
+ul.tabbed { position: relative ; width: 98%; padding: 0; margin: 0; }
+li.activeTab {   position: relative; height: 23px; width: 131px; }
+li.inactiveTab { position: relative; height: 23px; width: 131px; }
+
+li.action { position: relative; height: 18px;}
+
+li.activeTab a { height: 23px; width: 115px; color: #fff; padding-left: 16px; padding-top: 5px; padding-bottom: 5px; 
+	background-image: url(../images/tabs/tab_top_red.gif); background-repeat: no-repeat;
+}
+li.inactiveTab a { height: 23px; width: 115px; color: #000; padding-left: 16px; padding-top: 5px; padding-bottom: 5px; 
+	background-image: url(../images/tabs/tab_top_grey.gif); background-repeat: no-repeat;
+}
+.tabBottom { position: relative; width: 794px; margin: 0; padding: 0;
+	background-color: #702836; height: 10px;}
+
+div.topCtls {position: relative; width: 778px; height: 20px ; vertical-align: middle;}
+
+
+.textButton { position: relative; 
+	font-family: "Helvetica Neue", Arial, sans-serif;
+	font-size: 9px; margin-right: 3px; cursor: default;
+	margin-left: 0px; margin-top: 0px; margin-bottom: 0px;
+	}
+	 
+.verticalRule { position: relative; padding: 0;	margin: 0;
+	text-decoration: none; outline: none; cursor: default; }
+
+.imgButton { position: relative; padding: 0; cursor: default;
+ 	margin-left: 0px; margin-top: 0px; margin-bottom: 0px; margin-right: 3px; }
+
+.buttonHover { cursor: pointer; }
+.buttonActive { cursor: default; background-color: #00AEEF;}
+
+.buttonBreak { position: relative; padding: 0px 3px; cursor: default; }
+
+
+.clrBlk { color: #000; }
+.clrWht { color: #FFF; }
+.clrGry { color: #6E6F71; }
+
+/*div.topCtlsMsg {color: #666; }*/
+
+h2 { font-size:12px; font-weight:bold; height:24px; line-height:24px; margin:0; padding: 6px 0px; }
+h3 { font-size:12px; font-weight:bold; height:20px; line-height:20px; margin:0; padding: 0px; }
+
+form input { font-size: 10px; vertical-align: middle; padding-left: 3px; padding-right:3px;
+	display: inline; width:auto; margin: 5px 0 0 0; }
+
+form select { font-size: 10px; vertical-align: middle; width:auto; margin: 5px 0 0 0; }
+
+	
+form label { position: relative; display: block; text-align: right;
+	height: 15px; width: 75px; padding: 3px 0 0 0; margin: 5px 0 0 0;
+	float: left; /*width: 40px; */}
+form input[type="checkbox"] {
+	display:inline;
+	float:left;
+	height:24px;
+	line-height:24px;
+	vertical-align:middle;
+/*	margin: 0px; */
+}
+form input[type="radio"] {
+	display:inline;
+	float:left;
+	height:24px;
+	line-height:24px;
+	vertical-align:middle;
+/*	margin: 0px; */
+}
+hr { margin: 1px 0; }
+form label.rightSide { 	position: relative; white-space: nowrap; padding-left: 5px;
+vertical-align: middle; text-align: left; /* width: 250px */; margin-right : 0}
+
+
+.reslts {font-weight: bold ;}
+
+label.rightInptLabel { position: relative; height: 14px; display: inline;
+	vertical-align: middle; float: none; padding-left: 11px;}
+label.sumryOfSelOption { 
+	font-family: Arial, sans-serif; font-size: 11px; font-style: italic; color: #666666;}
+div.newResTbl {
+	overflow-x: auto;
+	overflow-y: auto;
+	position: relative; width: 778px; height: 140px;
+}
+table.tbl {
+	border-style: none;
+	position: relative;
+	table-layout: auto;
+	border-collapse: collapse;
+}
+.selected {
+	background-color: #00AEEF; color: #FFF;  }
+
+.tbl th {
+	border-bottom: 1px solid black; border-right: 1px solid black;
+	background-color:#DEE6DD;
+	height: 20px;
+	vertical-align: middle; text-align: left;
+	padding: 2px 5px;
+	font-weight: bold;
+}
+p 
+
+.tbl th#patientName { min-width: 130px; max-width: 130px; }
+.tbl th#status { min-width: 46px; max-width: 46px; }
+.tbl th#type{ min-width: 71px; max-width: 71px; }
+.tbl th#testName { min-width: 92px; max-width: 92px; }
+.tbl th#critAbi { min-width: 90px; max-width: 90px; }
+.tbl th#theDate { min-width: 60px; max-width: 60px; }
+.tbl th#orderComments { min-width: 273px; max-width: 273px; }
+.tbl th#priority { min-width: 45px; max-width: 45px; }
+.tbl th#age { min-width: 27px; max-width: 27px; }
+.tbl th#gender { min-width: 45px; max-width: 45px; }
+.tbl th#fmpSsn { min-width: 70px; max-width: 70px; }
+.tbl tr { background-color: #fff; height: 20px; vertical-align: middle; }
+table tr.alternate { background-color:#DEE6DD; }
+.warning { color: #F43333; }
+.tbl td {
+	border-bottom: 1px solid black; border-right: 1px solid black;
+	padding: 2px 5px;
+	/* text-overflow:ellipsis; */ 
+	overflow:hidden;
+	white-space:nowrap;
+}
+
+.resultsSpacer{	position: relative; height: 20px; width: 778px;
+	border-bottom: 1px solid #6E6F71; }
+
+#resultsDetailContainer{
+	position: relative; height: 330px; width: 778px;
+	padding: 4px 0px;
+/*	background-color: cyan; */
+}
+.tblOrChrtBkgrnd { background-color: #fff; }
+
+.resultsDetailLab{
+	position: relative; height: 330px; width: 778px;
+	/*overflow-y: auto; overflow-x: hidden;
+	background-color: magenta;*/ 
+}
+.resultsDetailRad{
+	position: relative; height: 330px; width: 778px;
+}
+
+.resultsDetailTable{
+	position: relative; 
+	max-height: 280px; 
+	width: 778px;
+	overflow-y: scroll; 
+	overflow-x: hidden;
+	/*background-color: magenta; 
+	border-bottom: 1px black solid; 
+	border-right: 1px black solid;*/ 
+	
+}
+
+.tbl th#resultName { min-width: 200px; max-width: 200px; }
+.tbl th#siteSpecimen { min-width: 100px; max-width: 100px; }
+.tbl th#resultValues { min-width: 90px; max-width: 90px; }
+.tbl th#units  { min-width: 50px; max-width: 50px; }
+.tbl th#refRng { min-width: 50px; max-width: 50px; }
+.tbl th#interp { min-width: 204px; max-width: 204px; }
+.tbl td a { color: blue; text-decoration: underline; }
+
+
+.resultsDetailRpt{
+	position: relative; height: 294px; width: 776px;
+	overflow-y: auto; overflow-x: hidden;
+	border: 1px black solid; 
+}
+
+
+table.rpt { position: relative; table-layout:fixed; border: none; }
+.rpt th { height: 0; border: none; }
+.rpt th#radiologyRptLabel { background-color: transparent; min-width: 160px; max-width: 160px; }
+.rpt th#radiologyRptValue { background-color: transparent; min-width: 658px; max-width: 658px; }
+.rpt td { border: none; vertical-align: top; }
+
+.hid { display: none; }
+
+table#resultsLegend { border: none; border-collapse: collapse;
+	margin:0; padding: 0;}
+th#resultsLegend1 { width: 35px; } 
+th#resultsLegend2 { width: 100px; } 
+th#resultsLegend3 { width: 35px; } 
+th#resultsLegend4 { width: 100px; } 
+
+table#resultsLegend th {border: none; height: 0; background-color: transparent; font-size: 0;}
+table#resultsLegend td {border: none;}
+div.pop_search { background-color: white; overflow-y: scroll; height: 150px }
+	
+fieldset.pop_search_controls fieldset {
+	display: inline-block;
+	height: 25px;
+	padding-bottom: 10px;
+	padding-left: 40px;
+	padding-top: 10px;
+	position: relative;
+	width: 120px;
+}
+.oneFiftyThree {
+	width: 153px;
+}
+
+fieldset.pop_search_controls fieldset input {
+	display: inline-block;
+	
+}
+
+/* * * * * * * * * * * end new results * * * * * * * * * * */
+
+.rela { position: relative; }
+
+
+
+
+
+
+
+
+

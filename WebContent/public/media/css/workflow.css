@@ -1,0 +1,15 @@
+.workflowHistory { position: absolute; top: 744px; left: 210px; width: 804px; height: 24px; background-color: #A6C96B;
+	background-image: url(../images/workflow/gr_History_Background_1x24.gif); background-repeat: repeat-x;padding-left: 10px;
+}
+.workflow {font-size: 12px; font-weight: normal; color: #fff; font-family: "Gill Sans", Trebuchet, sans-serif, serif; 
+	line-height: 24px;	vertical-align: middle; padding-left: 10px;
+}
+.workflowHistory span.workflow { font-size: 12px; font-weight: normal; color: #fff; 
+	font-family: "Gill Sans", Trebuchet, sans-serif, serif;	line-height: 24px;	vertical-align: middle;	 padding-left: 3px;
+}
+
+.workflowHistory span.workflowLast { color: red; font-size: 12px; font-weight: normal; color: #89817f; 
+	font-family: "Gill Sans", Trebuchet, sans-serif, serif;	line-height: 24px;	vertical-align: middle; padding-left: 3px;
+}
+
+

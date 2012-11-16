@@ -1,0 +1,52 @@
+#popupContainer{ background-color: #0055E5; border-color: #000; border-style: solid; border-width: 1px;
+	font-family: Arial, sans-serif; font-size: 10px; color: #fff; margin: 0; padding: 0;
+/*	width: 312px; 
+	height: 164px; */  
+	display: none; position: absolute; z-index: 9999;
+}
+
+#popupHandle { font-size: 12px; position: relative; height: 18px; background-color: transparent;
+	color: #fff; padding: 4px 4px 1px 0; 
+}
+#closePopup { height: 18px; width: 18px; float: right; }
+
+#closePopupImage { cursor: pointer; border: none; padding: 0; }
+
+#popupHandleText { position: relative; height: 18px; width: 75%; vertical-align: middle;
+	background-color: transparent; color: #fff; font-size: 1em; font-weight: bold; padding-left: 6px;
+}
+
+#popupContentWrapper { position: relative; background-color: #ECE9D8; border-color: #000;
+	border-style: solid; border-width: 1px; color: #000; margin: 1px;
+}
+
+#popupContent { position: relative; font-weight: normal; /*	height: 200px;*/
+	overflow: hidden; padding: 3px 15px; text-align: left;
+}
+
+#popupButtons { position: relative; padding: 2px 0px 5px 0px; text-align: center; }
+
+#popupButtons input[type="button"] { cursor: pointer; padding: 2px 20px; font-size: 9px; }
+
+.pop_form { position: relative; padding-left: 16px; padding-right: 16px; padding-top: 6px; }
+
+.pop_form fieldset { position: relative; margin: 0; padding: 0; }
+
+.pop_form fieldset ol { position: relative; margin: 0; padding: 0; }
+
+.pop_form fieldset li { position: relative; list-style: none; padding: 2px;
+	margin: 0; vertical-align:middle; height: 20px; }
+
+form fieldset.popup label { position: relative; text-align: right; width: 50px;
+	height: 13px; padding-top: 4px; padding-bottom: 3px; margin-right: 3px;
+}
+
+form fieldset.popup label.rightSide { width: 280px; text-align: left; padding-left: 0px; }
+
+form fieldset.popup input { position: relative; text-align: left; width: 150px; }
+
+form fieldset.popup input[type="checkbox"] { width: 15px; }
+
+form fieldset.popup select { position: relative; text-align: left; width: 400px; }
+	
+	

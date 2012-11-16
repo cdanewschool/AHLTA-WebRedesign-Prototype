@@ -1,0 +1,268 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 STRICT//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Pragma" content="no-cache"/>
+<meta http-equiv="Expires" content="-1"/>
+
+<title>P3 PIIM AHLTA GUI</title>
+
+<link href="WebContent/public/media/css/default.css" rel="stylesheet" 
+	type="text/css" media="all" />
+<link href="WebContent/public/media/css/topBar.css" rel="stylesheet" 
+	type="text/css" media="all" />
+<link href="WebContent/public/media/css/sideNav.css" rel="stylesheet" 
+	type="text/css" media="all" />
+<link href="WebContent/public/media/css/curPatient.css" rel="stylesheet" 
+	type="text/css" media="all" />
+<link href="WebContent/public/media/css/mainContent.css" rel="stylesheet" 
+	type="text/css" media="all" />
+<link href="WebContent/public/media/css/search.css" rel="stylesheet" 
+	type="text/css" media="all" />
+<link href="WebContent/public/media/css/workflow.css" rel="stylesheet" 
+	type="text/css" media="all" />
+<link href="WebContent/public/media/css/appointments.css" rel="stylesheet" 
+	type="text/css" media="all" />
+<link href="WebContent/public/media/css/popup.css" rel="stylesheet" 
+	type="text/css" media="all" />
+
+<script 
+	src="WebContent/javascript-services/ajile/version_1.2.1/com.iskitz.ajile.js" 
+	type="text/javascript" ></script>
+<script 
+	src="WebContent/javascript-services/ajile/version_1.2.1/firstLoad.js" 
+	type="text/javascript" ></script>
+<script 
+	src="WebContent/javascript-services/ajile/version_1.2.1/appLoader.js" 
+	type="text/javascript" ></script>
+
+</head>
+<body > 
+	<div id="overallWireframe">
+		<div class="topBar">
+			<div class="topMenu"
+				><ul
+					><li><a href="#" hreflang="en" tabindex="1">File</a></li
+					><li><a href="#" hreflang="en" tabindex="2">Edit</a></li
+					><li><a href="#" hreflang="en" tabindex="3">View</a></li
+					><li><a href="#" hreflang="en" tabindex="4">Go</a></li
+					><li><a href="#" hreflang="en" tabindex="5">Tools</a></li
+					><li><a href="#" hreflang="en" tabindex="6">Actions</a></li
+					><li><a href="#" hreflang="en" tabindex="7">Help</a></li
+				></ul
+			></div
+			><div class="notifications" 
+				><ul
+					><li><a><img 
+						src="WebContent/public/media/images/notifications/ico_Demographics_20x20.gif" 
+						alt="demographics" title="demographics"/></a></li
+					><li><a><img 
+						src="WebContent/public/media/images/notifications/ico_Appointments_20x20.gif" 
+						alt="appointments" title="appointments" /></a></li
+					><li><a><img 
+						src="WebContent/public/media/images/notifications/ico_Lab_20x20.gif" 
+						alt="lab" title="lab"/></a></li
+					><li><a><img 
+						src="WebContent/public/media/images/notifications/ico_Radiology_20x20.gif" 
+						alt="radiology" title="radiology"/></a></li
+				></ul
+			></div
+		></div
+		><div id="menuSelection"
+			><div id="sideNavContainer">
+				<ul class="sideNav" id="navMenu" 
+					><li id="tasksItem" class="topLevelItems"
+						><div class="fldr" id="fldrTasks" 
+							><a class="sideFolder" id="tasksFolder" href="" 
+								hreflang="en" tabindex="1" onclick="return sideNav.folderClick(event, 'tasks');" 
+								><span class="sideFolderText">Tasks</span
+								><span class="sideFolderArrow" id="tasksArrow">&#160;</span
+							></a
+						></div
+						><ul id="tasks" class="sideFolderSub" 
+							><li><a href="" hreflang="en" tabindex="2" 
+								onclick=" return sideNav.loadContent(event, 'tasks');"
+								><img alt="Notifications" 
+									src="WebContent/public/media/images/sideNav/ico_Notifications_20x20.gif" 
+									/><span>Notifications</span></a
+							></li><li
+						><a href="WebContent/public/templates/appointments/appointments.html" hreflang="en" tabindex="3" 
+							onclick="return sideNav.loadContent (event, 'tasks', 'WebContent/public/templates/appointments/appointments.html', piimAppointments );" 
+							><img alt="Appointments" src="WebContent/public/media/images/sideNav/ico_Appointments_20x20.gif" /><span>Appointments</span></a
+					></li><li
+						><div class="f2"
+							><a href="WebContent/public/templates/telephoneConsults/telephoneConsults.html" hreflang="en" tabindex="4" 
+								onclick="return sideNav.loadContent (event, 'tasks', 'WebContent/public/templates/telephoneConsults/telephoneConsults.html', consults );" 
+								><img alt="Telephone Consults"  src="WebContent/public/media/images/sideNav/ico_TelephoneConsults_20x20.gif" /><span>Telephone Consults</span></a
+						></div
+					></li><li
+						><div class="f2"
+							><a href="WebContent/public/templates/search/search.html" hreflang="en" tabindex="5" 
+								onclick="return sideNav.loadContent(event, 'tasks', 'spring/search', SearchCtl );"
+								><img alt="Search" src="WebContent/public/media/images/sideNav/ico_Search_20x20.gif" /><span>Search</span></a
+						></div
+					></li><li
+						><div class="f2"
+							><a href="WebContent/public/templates/newResults/newResults.html" hreflang="en" tabindex="6" 
+								onclick=" return sideNav.loadContent(event, 'tasks', 'spring/results_new?kind=wrap', newResults );"
+								><img alt="New Results" src="WebContent/public/media/images/sideNav/ico_NewResults_20x20.gif" /><span>New Results</span></a
+						></div
+					></li><li
+						><div class="f2"
+							><a href="" hreflang="en" tabindex="7" onclick=" return sideNav.loadContent(event, 'tasks');"
+								><img alt="Tasking" src="WebContent/public/media/images/sideNav/ico_Tasking_20x20.gif" /><span>Tasking</span></a	
+						></div
+					></li><li
+						><div class="f2"
+							><a href="" hreflang="en" tabindex="8" onclick=" return sideNav.loadContent(event, 'tasks');"
+								><img alt="Cosigns" src="WebContent/public/media/images/sideNav/ico_CoSigns_20x20.gif" /><span>Co-signs</span></a
+						></div
+					></li><li
+						><div class="f2"
+							><a href="" hreflang="en" tabindex="9" onclick=" return sideNav.loadContent(event, 'tasks');"
+								><img alt="Sign Orders" src="WebContent/public/media/images/sideNav/ico_SignOrders_20x20.gif" /><span>Sign Orders</span></a	
+						></div
+					></li><li
+						><div class="f2"
+							><a href="" hreflang="en" tabindex="10" onclick=" return sideNav.loadContent(event, 'tasks');"
+								><img alt="Consult Log" src="WebContent/public/media/images/sideNav/ico_ConsultLog_20x20.gif" /><span>Consult Log</span></a
+						></div
+					></li><li
+						><div class="f2"
+							><a href="" hreflang="en" tabindex="11" onclick=" return sideNav.loadContent(event, 'tasks');"
+								><img alt="Patient List" src="WebContent/public/media/images/sideNav/ico_PatientList_20x20.gif" /><span>Patient List</span></a
+						></div
+					></li><li
+						><div class="f2"
+							><a href="" hreflang="en" tabindex="12" onclick=" return sideNav.loadContent(event, 'tasks');"
+								><img alt="Patient Registries" src="WebContent/public/media/images/sideNav/ico_PatientRegistries_20x20.gif" /><span>Patient Registries</span></a
+						></div
+					></li><li
+						><div class="f2"
+							><a href="" hreflang="en" tabindex="13" onclick=" return sideNav.loadContent(event, 'tasks');"
+								><img alt="Reporting" src="WebContent/public/media/images/sideNav/ico_Reporting_20x20.gif" /><span>Reporting</span></a
+						></div
+					></li
+				></ul
+			></li
+			><li  id="toolsItem"  class="topLevelItems" 
+				><div class="fldr" ><a href="" class="sideFolder" id="toolsFolder" hreflang="en" tabindex="14" onclick="return sideNav.folderClick(event, 'tools', 'toolsFolder', 'toolsArrow');" 
+					><span class="sideFolderText">Tools</span><span class="sideFolderArrow" id="toolsArrow">&#160;</span></a
+				></div
+				><ul id="tools" class="sideFolderSub" 
+					><li><a href="" hreflang="en" tabindex="14" onclick=" return sideNav.loadContent(event, 'tools');" 
+						><span class="placeHolder" >&#160;</span><span>Template Management</span></a
+					></li
+					><li><a href="" hreflang="en" tabindex="15" onclick=" return sideNav.loadContent(event, 'tools');"
+						><span class="placeHolder" 	>&#160;</span><span>List Management</span></a
+					></li
+					><li><a href="" hreflang="en" tabindex="16" onclick=" return sideNav.loadContent(event, 'tools');"
+						><span class="placeHolder" >&#160;</span><span>Questionnaire Setup</span></a
+					></li
+					><li><a href="" hreflang="en" tabindex="17" onclick=" return sideNav.loadContent(event, 'tools');"
+						><span class="placeHolder" >&#160;</span><span>Screening Notifications</span></a
+					></li
+					><li><a href="" hreflang="en" tabindex="18" onclick=" return sideNav.loadContent(event, 'tools');"
+						><span class="placeHolder" >&#160;</span><span>Reminder Mapping</span></a
+					></li
+				></ul
+			></li
+			><li class="sideSpacer">&#160;
+			</li
+			><li id="pmrItem"  class="topLevelItems">
+				<div class="fldr" >
+					<a href="" class="sideFolder" id="pmrFolder" hreflang="en" tabindex="19" onclick="return sideNav.folderClick(event, 'pmr');" 
+						><span class="sideFolderText" id="curPatientNav">Patient Medical Records</span><span class="sideFolderArrow" id="pmrArrow">&#160;</span>
+					</a>
+				</div>
+				<ul id="pmr" class="sideFolderSub" 
+					><li><a href="" hreflang="en" tabindex="20" onclick=" return sideNav.loadContent(event, 'pmr');"
+						><img alt="Demographics" src="WebContent/public/media/images/sideNav/ico_Demographics_20x20.gif" /><span>Demographics</span></a
+					></li
+					><li><a href="" class="fileMenuItem" tabindex="21" id="hHistSubfolder" onclick=" return sideNav.subfolderClick(event, 'healthHist', 'hHistSubfolder', 'pmr');"
+							><img alt="Health History" src="WebContent/public/media/images/sideNav/ico_HealthHistory_20x20.gif" /><span >Health History</span><span class="folderItemExpand">&gt;</span></a
+					></li
+					><li><a href="" hreflang="en" tabindex="22" onclick=" return sideNav.loadContent(event, 'pmr');"
+						><img alt="Lab" src="WebContent/public/media/images/sideNav/ico_Lab_20x20.gif" /><span>Lab</span></a
+					></li
+					><li><a href="" hreflang="en" tabindex="23" onclick=" return sideNav.loadContent(event, 'pmr');"
+						><img alt="Radiology" src="WebContent/public/media/images/sideNav/ico_Radiology_20x20.gif" /><span>Radiology</span></a
+					></li
+					><li><a href="" hreflang="en" tabindex="24" onclick=" return sideNav.loadContent(event, 'pmr');"
+						><img alt="Clinical Notes" src="WebContent/public/media/images/sideNav/ico_ClinicalNotes_20x20.gif" /><span>Clinical Notes</span></a
+					></li
+					><li><a href="" hreflang="en" tabindex="25"	onclick=" return sideNav.loadContent(event, 'pmr');"
+						><img alt="Previous Encounters" src="WebContent/public/media/images/sideNav/ico_PreviousEncounters_20x20.gif" /><span>Previous Encounters</span></a
+					></li
+					><li><a href="" hreflang="en" tabindex="26" onclick=" return sideNav.loadContent(event, 'pmr');"
+						><img alt="Flowsheets" src="WebContent/public/media/images/sideNav/ico_Flowsheets_20x20.gif" /><span>Flowsheets</span></a
+					></li
+					><li><a href="" class="fileMenuItem" id="curEncSubfolder" hreflang="en" tabindex="27" onclick=" return sideNav.subfolderClick(event, 'currentEncounter', 'curEncSubfolder', 'pmr');" 
+						><img alt="" src="WebContent/public/media/images/sideNav/ico_CurrentEncounter_20x20.gif" /><span>Current Encounter</span><span class="folderItemExpand">&gt;</span></a
+					></li
+				></ul
+				><ul id="healthHist" class="sideFolderSubSub"
+					><li><a href="" hreflang="en" tabindex="28" onclick=" return sideNav.loadContent(event, 'pmr');" >Problems</a></li
+					><li><a href="" hreflang="en" tabindex="29" onclick=" return sideNav.loadContent(event, 'pmr');" >Meds</a></li
+					><li><a href="" hreflang="en" tabindex="30" onclick=" return sideNav.loadContent(event, 'pmr');" >Allergy</a></li
+					><li><a href="" hreflang="en" tabindex="31" onclick=" return sideNav.loadContent(event, 'pmr');" >Wellness</a></li
+					><li><a href="" hreflang="en" tabindex="32" onclick=" return sideNav.loadContent(event, 'pmr');" >Immunization</a></li
+					><li><a href="" hreflang="en" tabindex="33" onclick=" return sideNav.loadContent(event, 'pmr');" >Vital Signs Review</a></li
+					><li><a href="" hreflang="en" tabindex="34" onclick=" return sideNav.loadContent(event, 'pmr');" >PKC Couplers</a></li
+					><li><a href="" hreflang="en" tabindex="35" onclick=" return sideNav.loadContent(event, 'pmr');" >Readiness</a></li
+					><li><a href="" hreflang="en" tabindex="36" onclick=" return sideNav.loadContent(event, 'pmr');" >Patient Questionaire</a></li
+				></ul
+				><ul id="currentEncounter" class="sideFolderSubSub"
+					><li><a href="" hreflang="en" tabindex="37" onclick=" return sideNav.loadContent(event, 'pmr');">Screening</a></li
+					><li><a href="" hreflang="en" tabindex="38" onclick=" return sideNav.loadContent(event, 'pmr');">Vital Sign Entry</a></li
+					><li><a href="" hreflang="en" tabindex="39" onclick=" return sideNav.loadContent(event, 'pmr');">S/O</a></li
+					><li><a href="" hreflang="en" tabindex="40" onclick=" return sideNav.loadContent(event, 'pmr');">Drawing</a></li
+					><li><a href="" hreflang="en" tabindex="41" onclick=" return sideNav.loadContent(event, 'pmr');">A/P</a></li
+					><li><a href="" hreflang="en" tabindex="42" onclick=" return sideNav.loadContent(event, 'pmr');">Dispositions</a></li
+				></ul>
+			</li>
+		</ul>
+	</div> <!-- end id="sideNavContainer" -->
+
+			
+			
+			
+		</div>
+		<div class="selectedPatient">
+			<div class="patientProfile" id="curPat" >
+				<div>
+					<span class="profileBrief" >Patient's last name, first name</span
+					>|<span class="profileBrief" >ID number</span
+					>|<span class="profileBrief" >Age</span
+					>|<span class="profileBrief" >Gender</span
+					>|<span class="profileBrief" >Date of Birth</span
+					>|<span class="profileBrief" >Allergy warning</span>
+				</div>
+			</div>
+		</div>
+		<div id="mainContentDisplay"><div></div></div>
+		<div class="workflowHistory"><span class="workflow" >Menu</span><span class="workflow" >&gt;</span><span class="workflow" >Menu</span><span class="workflowLast">&gt;</span><span class="workflowLast">Menu</span></div>
+	</div>
+	
+	<div id="popupContainer">
+		<div id="popupHandle"
+			><div id="closePopup" 
+				><img id="closePopupImage" alt="Close Popup" title="Close Window" 
+					src="WebContent/public/media/images/popup/Btn_Close_16x16.gif" 
+					onclick="return popup.close(event);" 
+			/></div>
+			<div id="popupHandleText"></div
+		></div>
+		<div id="popupContentWrapper"></div>
+	</div>
+	
+	<div class="hid" id="current_patient" patient_id=""> </div>
+</body>
+
+<script src="WebContent/javascript-services/ajile/version_1.2.1/postLoad.js" type="text/javascript" ></script>
+
+</html>
+
+
+
+

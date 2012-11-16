@@ -1,0 +1,10 @@
+#selectedPatientsNameProfileBrief { position: absolute; top: 49px; left: 211px; width: 815px; height: 24px;
+ 	background-color: #036D00; background-image: url(../images/briefProfile/gr_PatientInfo_Background_Red_1x24.gif);
+ 	background-repeat: repeat-x;
+ 	font-size: 12px; font-weight: normal; color: #FFFFFF; font-family: Georgia, Palatino , serif;
+	line-height: 24px; vertical-align: middle; }
+
+.profileBrief { font-size: 12px; font-weight: normal; color: #FFFFFF; font-family: Georgia, Palatino , serif;
+	line-height: 24px; height: 24px; vertical-align: middle;        padding: 11px;}
+
+

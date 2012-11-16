@@ -1,0 +1,29 @@
+.myPriNoti { position: absolute;
+	top: 25px;	left: 211px;	width: 815px;
+	height: 24px;	line-height: 24px;
+	vertical-align: middle; 	font-size: 12px;
+	font-weight: normal; background-color: #BFCCDC;
+	color: #000000;	font-family: "Gill Sans", Trebuchet, sans-serif, serif;
+	background-image: url(../images/notifications/gr_Notifications_Background_1x24.gif);
+	background-repeat: repeat-x;
+}
+
+.myPri { float: left;	width: 250px;
+	border-right: 1px solid black;	padding-left: 10px;	}
+
+.noti {	display: inline;	float: left;	width: 542px;
+	padding-right: 11px;	}
+.noti ul{ 	margin: 0;	float: right;	padding-left: 0;
+	display: inline;	height: 24px; }
+
+.noti ul li { display: inline; height: 24px;
+	position: relative; line-height: 24px;
+	font-size: 12px; width: 20px; padding-left: 7px;
+}
+
+
+
+	#noti span {	float: right;	height: 20px;
+	width: 20px;	margin-left: 3px;	}
+
+	

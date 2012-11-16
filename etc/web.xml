@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" xmlns="http://java.sun.com/xml/ns/javaee"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+        http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+
+	<!-- Reads request input using UTF-8 encoding -->
+
+	<welcome-file-list>
+		<welcome-file>/WebContent/public/index.html</welcome-file>
+	</welcome-file-list>
+
+
+	<servlet>
+		<servlet-name>p3</servlet-name>
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+
+
+	<servlet>
+		<servlet-name>tatrc</servlet-name>
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>p3</servlet-name>
+		<url-pattern>/spring/*</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>tatrc</servlet-name>
+		<url-pattern>/spring/*</url-pattern>
+	</servlet-mapping>
+	
+	<!-- Define an error handler for java.lang.Throwable -->
+	<error-page>
+		<exception-type>java.lang.Throwable</exception-type>
+		<location>/WebContent/public/error.html</location>
+	</error-page> 
+	<session-config>
+      <session-timeout>30</session-timeout>    <!-- 30 minutes -->
+    </session-config>
+	
+</web-app>
+

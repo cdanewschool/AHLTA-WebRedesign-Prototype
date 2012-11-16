@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="edu.newschool.piim.model.results">
+
+	<class 	name="ResultForwarded" 
+		table="new_result_forwarded" >
+		<id name="id" column="id_new_result_forwarded" type="int">
+            <generator class="native"/>
+        </id>
+	 	<property name="pawsNaturalKey" 
+			 column="paws_natural_key" type="string" />
+		<property name="providerNcid" column="provider_ncid" 
+			type="string" />
+	</class>
+	
+</hibernate-mapping>

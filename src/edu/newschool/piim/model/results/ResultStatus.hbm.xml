@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"	
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="edu.newschool.piim.model.results">
+
+	<typedef name="ResultStatusStates" class="edu.newschool.piim.util.GenericEnumUserType">
+		<param name="enumClassName">edu.newschool.piim.model.results.ResultStatusStates</param>
+	</typedef>
+	
+	<class 	name="ResultStatus" 
+		table="new_result_status" >
+		<id name="id" column="id_new_result" type="int">
+            <generator class="native"/>
+        </id>
+	 	<property name="pawsNaturalKey" 
+			 column="paws_natural_key" type="string" />
+		<property name="state" column="status" type="ResultStatusStates" />
+	</class>
+	
+</hibernate-mapping>

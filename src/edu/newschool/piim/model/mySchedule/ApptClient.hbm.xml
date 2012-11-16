@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="edu.newschool.piim.model.mySchedule">
+
+	
+	<class name="ApptClient" table="appt" >
+		<id name="apptId" column="appt_id" type="int">
+            <generator class="native"/>
+        </id>
+		<property name="apptEnd" column="end" type="timestamp" /> 
+		<property name="apptIen" column="ien" type="string" />
+		<property name="apptKind" column="kind" type="string" />
+		<property name="apptStart" column="start" type="timestamp" />
+		<property name="apptStatus" column="status" type="string" />
+		<property name="callbackPhone" column="calback_nbr" type="string" />
+		<property name="checkinTime" column="checkin" type="timestamp" />
+		<property name="classification" column="classification" type="string" />
+		<property name="clinic" column="clinic" type="string" />
+		<property name="comments" column="comments" type="string" />
+		<property name="encounter" column="encounter" type="string" />
+		<property name="meprsCode" column="merps_code" type="string" />
+		<property name="meprsDescription" column="merps_description" type="string" />
+		<property name="provider" column="provider" type="string" />
+		<property name="reasonForVisit" column="reason_for_visit" type="string" />
+		<property name="observation" column="observation" type="boolean" />
+		<property name="outpatOk" column="outpatOk" type="string" />
+		<property name="pawsPatientId" column="patient_id" type="string" />
+		<property name="rel2Inj" column="rel_2_inj" type="string" />
+		<property name="rel2Inpat" column="rel_2_inpat" type="string" />
+		<property name="urgency" column="urgency" type="string" />
+		<property name="usvType" column="usvType" type="string" />
+
+	</class>
+	
+</hibernate-mapping>

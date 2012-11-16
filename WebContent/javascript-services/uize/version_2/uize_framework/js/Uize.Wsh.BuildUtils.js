@@ -1,0 +1,8 @@
+/*
+	UIZE JAVASCRIPT FRAMEWORK 2010-01-25
+
+	http://www.uize.com/reference/Uize.Wsh.BuildUtils.html
+	Available under MIT License or GNU General Public License -- http://www.uize.com/license.html
+*/
+Uize.module({name:'Uize.Wsh.BuildUtils',required:['Uize.Url','Uize.Template','Uize.String.Lines','Uize.Json'],builder:function(){var _a=function(){};var _b={};function _c(_d){return _d}_a.getHtmlFilesInfo=function(_e,_f){var _g=[];if(!_f)_f=_c;for(var _h= -1,_i=Uize.Wsh.getFiles(_e),_j=_i.length;++_h<_j;){var _k=_i[_h],_l=Uize.Url.from(_k).file;if(/\.html$/i.test(_l)&&_l.charAt(0)!='~'){var _m=Uize.Wsh.readFile(_k),_n=_m.match(/<meta name="keywords" content="(.*?)"\/>/),_o=_m.match(/<meta name="description" content="(.*?)"\/>/);_g.push({path:_e+'/'+_l,title:_f(_m.match(/<title>(.*?)<\/title>/)[1]),keywords:_n?_n[1]:'',description:_o?_o[1]:''});}}_g.sort(function(_p,_q){return((_p._r||(_p._r=_p.title.toLowerCase()))<(_q._r||(_q._r=_q.title.toLowerCase()))? -1:1);});for(var _h= -1,_s=_g.length;++_h<_s;)delete _g[_h]._r;return _g;};_a.compileJstFile=function(_t){var _u=_b[_t];if(!_u){if(!Uize.Wsh.fileExists(_t))return;_u=_b[_t]=Uize.Template.compile(Uize.Wsh.readFile(_t),{result:'full'});
+Uize.module({required:_u.required});}return _u.templateFunction;};_a.processJstFile=function(_t,_v){var _u=_a.compileJstFile(_t);_u&&Uize.Wsh.writeFile({path:_t.replace(/\.jst$/,''),text:_u(_v)});};_a.writeDataModule=function(_w,_x,_y){Uize.Wsh.writeFile({path:_w+'\\'+_x+'.js',text:'Uize.module ({\n'+'\tname:\''+_x+'\',\n'+'\tbuilder:function () {\n'+'\t\treturn function () {\n'+'\t\t\treturn '+Uize.String.Lines.indent(Uize.Json.to(_y),3,'\t',false)+';\n'+'\t\t};\n'+'\t}\n'+'});\n'});};return _a;}});

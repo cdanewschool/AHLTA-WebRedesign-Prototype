@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project basedir="." default="build">
+	<!-- this has to go first -->
+	<property environment="env" />
+
+	<property file="build.properties" />
+
+	<property name="buildDir" value="${env.PWD}/../classes" />
+	<property name="distDir" value="${env.PWD}/dist" />
+
+	<property name="src.dir" value="src" />
+	<property name="build.dir" value="classes" />
+
+	<path id="build.classpath">
+		<fileset dir="lib">
+			<include name="*.jar" />
+		</fileset>
+		<fileset dir="${appserver.lib}"> <!-- servlet API classes: -->
+			<include name="servlet*.jar" />
+		</fileset>
+		<pathelement path="${build.dir}" />
+	</path>
+	
+	<path id="project.classpath">
+		<fileset dir="${env.PWD}/../lib">
+			<include name="**/*.jar" />
+		</fileset>
+		<fileset dir="${appserver.lib}"> <!-- servlet API classes: -->
+			<include name="*.jar" />
+		</fileset>
+		<pathelement path="${build.dir}" />
+	</path>
+
+	<target name="clean" depends="cleanBuild,cleanDist">
+		<echo>Clean done</echo>
+	</target>
+
+	<target name="cleanBuild">
+		<delete dir="${buildDir}" />
+	</target>
+	
+	<target name="cleanDeploy">
+		<delete dir="${appserver.deploy}" />
+	</target>
+
+	<target name="cleanDist">
+		<delete dir="${distDir}" />
+	</target>
+
+	<target name="init" depends="initBuild,initDist">
+		<echo>Init done</echo>
+	</target>
+
+	<target name="initBuild">
+		<mkdir dir="${buildDir}" />
+	</target>
+
+	<target name="initDist">
+		<mkdir dir="${distDir}" />
+	</target>
+
+	<target name="readyBuild" depends="cleanDist,initDist">
+		<echo>Dist</echo>
+		<mkdir dir="${distDir}/WEB-INF" />
+		<mkdir dir="${distDir}/WEB-INF/classes" />
+		<copy todir="${distDir}/WEB-INF/classes">
+			<fileset dir="${buildDir}">
+				<include name="**/*" />
+			</fileset>
+		</copy>
+		<copy todir="${distDir}/WEB-INF/classes">
+			<fileset dir="${buildDir}/../src">
+				<include name="**/*" />
+			</fileset>
+		</copy>
+
+		<mkdir dir="${distDir}/WEB-INF/lib" />
+		<copy todir="${distDir}/WEB-INF/lib">
+			<fileset dir="${buildDir}/../lib">
+				<include name="**/*" />
+			</fileset>
+		</copy>
+		<copy todir="${distDir}/WEB-INF">
+			<fileset dir="${buildDir}/../etc">
+				<include name="**/*" />
+			</fileset>
+		</copy>
+		<copy todir="${distDir}/WEB-INF/src">
+			<fileset dir="${buildDir}/../src">
+				<include name="**/*" />
+			</fileset>
+		</copy>
+		<copy todir="${distDir}/WebContent">
+			<fileset dir="${buildDir}/../WebContent">
+				<include name="**/*" />
+			</fileset>
+		</copy>
+	</target>
+
+	<target name="compile" depends="cleanBuild,initBuild">
+		<javac srcdir="${env.PWD}/../src" destdir="${buildDir}" fork="true"
+			debug="true" deprecation="false" nowarn="true" source="1.5"
+			includeAntRuntime="false">
+			<classpath refid="project.classpath" />
+		</javac>
+		<echo>Compiled</echo>
+	</target>
+
+	<!--
+	<target name="makeDist" depends="cleanDist,initDist">
+		<copy todir="${distClasses}">
+			<fileset dir="${buildClasses}">
+				<include name="**/*" />
+			</fileset>
+		</copy>
+		<echo>Dist</echo>
+	</target>
+	-->
+	
+	<target name="makeDeploy" depends="cleanDeploy">
+		<copy todir="${appserver.deploy}">
+			<fileset dir="${distDir}">
+				<include name="**/*" />
+			</fileset>
+		</copy>
+		<echo>Deploy</echo>
+	</target>
+	
+	<target name="build">
+		<mkdir dir="${build.dir}" />
+		<javac destdir="${build.dir}" source="1.5" target="1.5" debug="true" deprecation="false" optimize="false" failonerror="true">
+			<src path="${src.dir}" />
+			<classpath refid="build.classpath" />
+		</javac>
+	</target>
+	<!--
+		<target name="clean" description="Clean output directories"> <delete>
+		<fileset dir="${build.dir}"> <include name="**/*.class"/> </fileset>
+		</delete> </target>
+	-->
+</project>

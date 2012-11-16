@@ -1,0 +1,126 @@
+
+#menuSelection {	
+	position: absolute;	top: 24px;	left: 0px;	width: 200px;	height: 744px;	
+	background-color: #F5F5E6;	padding-left: 5px;	padding-right: 5px;	
+	z-index: 2; /*cursor: pointer;*/
+}
+
+ 
+#sideNavContainer {	position: relative; top:0;left:0; width: 200px;	
+	font-family: "Gill Sans", Trebuchet, sans-serif, serif;	padding-bottom: 2px;
+}
+
+ul.sideNav {	position: relative; width: 200px; top:0; left:0;
+	list-style-image: none;	list-style-position: outside; 	
+	list-style-type: none;	margin: 0;	padding: 0;	}
+
+ul.sideNav li.topLevelItems {	
+	background-color: #fff;	position: relative; width: 198px; padding: 0px; 
+	margin: 0px; border-left: 1px solid black; border-right: 1px solid black;
+	border-bottom: 1px solid black; 
+}
+ul.sideNav li.topLevelItems#tasksItem { border-top: 1px solid black; }
+ul.sideNav li.topLevelItems#pmrItem { border-top: 1px solid black;}
+
+ul.sideNav li.sideSpacer { border: none; position: relative; height: 5px;
+	width: 198px; margin: 0px; border: none; }
+
+ul.sideNav li.topLevelItems div.fldr { position: relative; height: 24px; 
+	margin-bottom: 3px; 
+}
+
+
+#sideNavContainer .sideNav a { cursor: pointer; }
+#sideNavContainer .sideNav a:hover { cursor: pointer; }
+#sideNavContainer .sideNav a:link { cursor: pointer; }
+#sideNavContainer .sideNav a:visited { cursor: pointer; }
+
+ul.sideNav li.topLevelItems a.sideFolder { background-color: #D7D7D7;
+	background-image: url(../images/sideNav/gr_ModuleNav_Background-Inactive_200x24.gif);
+	background-position: center; background-repeat: no-repeat; color: #333333;
+	float: left; font-size: 11px; font-weight: bold; height: 24px; 
+	line-height: 24px; vertical-align: middle; overflow: visible; 
+	text-decoration: none;	
+}
+
+ul.sideNav a.sideFolder:active { background-color: #FAAF40;
+	background-image: url(../images/sideNav/gr_ModuleNav_Background-Active_200x24.gif);
+}
+	
+ul.sideNav a.sideFolder span.sideFolderText { z-index: 100;	width: 160px;
+ 	float: left; padding-left: 11px;
+ }
+ul.sideNav a.sideFolder span.sideFolderArrow { float: left;	width: 20px;
+	padding-right: 7px; height: 24px; z-index: 200; vertical-align: middle;	
+	background-image: url(../images/sideNav/gr_ArrowDown_10x8.gif);
+	background-position: center; background-repeat: no-repeat; 
+	text-decoration: none;
+}
+
+ul.sideNav ul.sideFolderSub { position: relative; left: 0px;
+	background-color: #FFFFFF; border: none; display: block ; width: 198px; 
+	margin: 0px; list-style-type: none; list-style-position: outside; 
+	list-style-image: none; padding: 0px; 
+}
+ 	 
+ul.sideNav ul.sideFolderSub#tasks  { }
+ul.sideNav ul.sideFolderSub#tools  { }
+ul.sideNav ul.sideFolderSub#patientMediRec  { }
+
+
+ul.sideNav li.topLevelItems ul.sideFolderSub li { position: relative;
+	margin-top: 0px; height: 20px; width: 198px; margin-bottom: 3px; 
+}
+
+ul.sideNav li.topLevelItems ul.sideFolderSub li a { float: left; color: #000000;
+	text-decoration: none; white-space: nowrap; width: 198px; 
+}
+
+ul.sideNav li.topLevelItems ul.sideFolderSub li a:hover { 
+	background-color: #00AEEF;	color: #FFFFFF;
+}
+
+ul.sideNav li.topLevelItems ul.sideFolderSub li a:focus { 
+	background-color: #00AEEF;	color: #FFFFFF; outline: none;
+}
+
+ul.sideNav li.topLevelItems ul.sideFolderSub a img { float: left;
+	cursor: pointer; border: none;	vertical-align: middle;	padding-left: 11px;
+}
+	
+ul.sideNav li.topLevelItems ul.sideFolderSub a span { float: left;
+	cursor: pointer; line-height: 20px; font-size: 12px; vertical-align: middle;
+	font-weight: normal; padding-left: 3px; 
+}
+
+ul.sideNav li.topLevelItems ul.sideFolderSub a span.folderItemExpand {
+	float: right;cursor: pointer; line-height: 20px; vertical-align: middle;
+	font-size: 12px; padding-right: 3px;
+}
+
+ul.sideNav ul.sideFolderSub a span.placeHolder { float: left; height: 20px;
+	width: 20px; border: none; vertical-align: middle;	padding-left: 11px;
+}
+
+ul.sideNav ul.sideFolderSubSub { background-color: #FFFFFF;	width: 168px;
+	position: relative; display: none; list-style-image: none;
+	list-style-position: outside; list-style-type: none;
+	margin: 0px; padding-left: 0px; z-index : 500;
+}
+
+ul.sideNav ul.sideFolderSubSub li {	position: relative; margin-top: 0px;		
+	height: 20px; width: 168px; margin-bottom: 3px; 
+}
+
+ul.sideNav ul.sideFolderSubSub li a { padding-left: 11px; color: #000000;	
+	text-decoration: none; width: 157px; float: left; height: 20px;	
+	font-size: 12px; vertical-align: baseline;
+}
+
+ul.sideNav ul.sideFolderSubSub li a:hover {	color: #FFFFFF;
+	background-color: #00AEEF;
+}
+
+ul.sideNav ul.sideFolderSubSub li a:focus {	color: #FFFFFF;
+	background-color: #00AEEF; outline: none 
+}
