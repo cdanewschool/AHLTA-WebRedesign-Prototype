@@ -6,6 +6,13 @@ DESCRIPTION
 
 A prototype created to demonstrate the use of five out of 14 AHLTA modules redesigned by Parsons Institute for Information Mapping (PIIM), in a web-based environment using the Patient Ancillary Web Services (PAWS).
 
+The GUI framework/technology prototype contains the following key attributes, elements, and components: 
+1.  Built entirely in Ajax and JavaScript utilizing HTML and CSS 3 and integrated components from 
+a.	Major, open-source JavaScript libraries.
+2.	Enabled integration with the Java Portlet specification. 
+3.	GUI components were compartmentalized to allow dynamic loading and unloading of modules. 
+4.	Enabled connection to the PAWS system to run AHLTA functionalities. 
+
 LICENSING
 
 © Copyright 2011 PIIM
